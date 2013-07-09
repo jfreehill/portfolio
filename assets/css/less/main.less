@@ -11,6 +11,7 @@
 body {
 	background-color: #eaf385;
 	padding: 0;
+	-webkit-font-smoothing: antialiased;
 }
 
 @import "fontello.less";
@@ -55,11 +56,9 @@ header {
 	}
 }
 
-.home nav {
-	width: 80%;
+nav {
 	margin: 0 auto;
 	display: block;
-	
 	ul {
 		list-style: none;
 		padding: 0;
@@ -71,15 +70,12 @@ header {
 		text-transform: uppercase;
 		text-shadow: 2px 2px 1 rgba(0, 0, 0, .5);
 		color: white;
-		display: block;
 		background: #05667b url("../img/bg-diag-right.png") no-repeat;
 		background-position: 400px center;
 		border-radius: 5px;
-		margin-bottom: 24px;
-		padding-left: 25px;
-		text-align: left;
 		position: relative;
 		overflow: hidden;
+		padding: 9px 5px;
 		transition: background-color .2s, background-position .3s;
 		&:hover {
 			color: white;
@@ -88,19 +84,10 @@ header {
 			background-position: left center;
 			transition: background-color .6s, background-position .3s;
 		}
-		i {
-			position: absolute;
-			right: -50px;
-			transition: right .2s;
-		}
-		&:hover i {
-			right: 15px;
-			transition: right .1s;
-		}
-		&:last-child {
-			margin-bottom: 0;
-		}
+
 	}
+	position: absolute;
+	left: 10px;
 }
 .Line (@height, @width, @color, @rotation) {
 	height: @height;
@@ -135,11 +122,34 @@ header {
 }
 
 .home {
-	.content {
-		width: 450px;
+	.content { 
+		width: 450px; 
 	}
-	h2 {
-		font-size: 36px;
+	h2 { 
+		font-size: 36px; 
+	}
+	nav {
+		position: relative;
+		left: 0;
+		width: 80%;
+		a {
+			display: block;
+			margin-bottom: 14px;
+			padding: 0 0 0 25px;
+			text-align: left; 
+			i {
+				position: absolute;
+				right: -50px;
+				transition: right .2s;
+			}
+			&:hover i {
+				right: 15px;
+				transition: right .1s;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 }
 

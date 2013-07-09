@@ -9,6 +9,7 @@
 body {
   background-color: #eaf385;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
 }
 @font-face {
   font-family: 'fontello';
@@ -182,51 +183,37 @@ header h1 {
   right: 0;
   text-shadow: 0 0 10px #071158;
 }
-.home nav {
-  width: 80%;
+nav {
   margin: 0 auto;
   display: block;
+  position: absolute;
+  left: 10px;
 }
-.home nav ul {
+nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.home nav a {
+nav a {
   font: 30px/1.75em 'Raleway', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
   text-shadow: 2px 2px 1 rgba(0, 0, 0, 0.5);
   color: white;
-  display: block;
   background: #05667b url("../img/bg-diag-right.png") no-repeat;
   background-position: 400px center;
   border-radius: 5px;
-  margin-bottom: 24px;
-  padding-left: 25px;
-  text-align: left;
   position: relative;
   overflow: hidden;
+  padding: 9px 5px;
   transition: background-color 0.2s, background-position 0.3s;
 }
-.home nav a:hover {
+nav a:hover {
   color: white;
   text-decoration: none;
   background-color: #3c057b;
   background-position: left center;
   transition: background-color 0.6s, background-position 0.3s;
-}
-.home nav a i {
-  position: absolute;
-  right: -50px;
-  transition: right .2s;
-}
-.home nav a:hover i {
-  right: 15px;
-  transition: right .1s;
-}
-.home nav a:last-child {
-  margin-bottom: 0;
 }
 .line-1 {
   height: 40px;
@@ -293,6 +280,29 @@ header h1 {
 }
 .home h2 {
   font-size: 36px;
+}
+.home nav {
+  position: relative;
+  left: 0;
+  width: 80%;
+}
+.home nav a {
+  display: block;
+  margin-bottom: 14px;
+  padding: 0 0 0 25px;
+  text-align: left;
+}
+.home nav a i {
+  position: absolute;
+  right: -50px;
+  transition: right .2s;
+}
+.home nav a:hover i {
+  right: 15px;
+  transition: right .1s;
+}
+.home nav a:last-child {
+  margin-bottom: 0;
 }
 @media (max-width: 480px) {
   h2 {
