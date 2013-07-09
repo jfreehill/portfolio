@@ -1,0 +1,308 @@
+@import url(http://fonts.googleapis.com/css?family=Pacifico|Raleway:900,500);
+/* ===========================
+ * Portfolio Site Styles
+ * Author: Jeremy Freehill
+ * Version: 0.1
+ * Note: Compiles from LESS
+ *============================= */
+/* Fontello */
+body {
+  background-color: #eaf385;
+  padding: 0;
+}
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?10023086');
+  src: url('../font/fontello.eot?10023086#iefix') format('embedded-opentype'), url('../font/fontello.woff?10023086') format('woff'), url('../font/fontello.ttf?10023086') format('truetype'), url('../font/fontello.svg?10023086#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+
+  /* font-size: 120%; */
+
+}
+.icon-home:before {
+  content: '\e81a';
+}
+/* '' */
+.icon-note:before {
+  content: '\e804';
+}
+/* '' */
+.icon-note-beamed:before {
+  content: '\e805';
+}
+/* '' */
+.icon-mail:before {
+  content: '\e814';
+}
+/* '' */
+.icon-link-1:before {
+  content: '\e812';
+}
+/* '' */
+.icon-help-circled:before {
+  content: '\e80f';
+}
+/* '' */
+.icon-info-circled:before {
+  content: '\e80e';
+}
+/* '' */
+.icon-code:before {
+  content: '\e815';
+}
+/* '' */
+.icon-location:before {
+  content: '\e819';
+}
+/* '' */
+.icon-article:before {
+  content: '\e818';
+}
+/* '' */
+.icon-facebook:before {
+  content: '\e807';
+}
+/* '' */
+.icon-beaker:before {
+  content: '\e80c';
+}
+/* '' */
+.icon-gplus-squared:before {
+  content: '\e80b';
+}
+/* '' */
+.icon-doc-text:before {
+  content: '\e817';
+}
+/* '' */
+.icon-code-1:before {
+  content: '\e816';
+}
+/* '' */
+.icon-angle-circled-left:before {
+  content: '\e801';
+}
+/* '' */
+.icon-angle-circled-right:before {
+  content: '\e800';
+}
+/* '' */
+.icon-angle-circled-up:before {
+  content: '\e803';
+}
+/* '' */
+.icon-angle-circled-down:before {
+  content: '\e802';
+}
+/* '' */
+.icon-link-ext-alt:before {
+  content: '\e811';
+}
+/* '' */
+.icon-github-squared:before {
+  content: '\e80a';
+}
+/* '' */
+.icon-facebook-squared:before {
+  content: '\e808';
+}
+/* '' */
+.icon-linkedin-squared:before {
+  content: '\e809';
+}
+/* '' */
+.icon-picture:before {
+  content: '\e806';
+}
+/* '' */
+.icon-book-open:before {
+  content: '\e80d';
+}
+/* '' */
+.icon-link:before {
+  content: '\e810';
+}
+/* '' */
+.icon-link-2:before {
+  content: '\e813';
+}
+/* '' */h1 {
+  font: 60px 'Raleway', sans-serif;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 0;
+  line-height: 0.95em;
+}
+h2 {
+  font: 48px/1.125em 'Pacifico', cursive;
+  color: #1e4849;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.content {
+  padding: 24px 0;
+  border-width: 8px;
+  margin: 0 auto 50px auto;
+  -webkit-border-image: url("../img/bg-pattern-01.png") 8 0 8 0 repeat;
+}
+header {
+  background: #071158 url('../img/bg-header-full.jpg') center bottom no-repeat;
+  height: 170px;
+  border-bottom: 9px solid white;
+  margin-bottom: 22px;
+  position: relative;
+  overflow: hidden;
+}
+header h1 {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-shadow: 0 0 10px #071158;
+}
+.home nav {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+.home nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.home nav a {
+  font: 30px/1.75em 'Raleway', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 1 rgba(0, 0, 0, 0.5);
+  color: white;
+  display: block;
+  background: #05667b url("../img/bg-diag-right.png") no-repeat;
+  background-position: 400px center;
+  border-radius: 5px;
+  margin-bottom: 24px;
+  padding-left: 25px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.2s, background-position 0.3s;
+}
+.home nav a:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #3c057b;
+  background-position: left center;
+  transition: background-color 0.6s, background-position 0.3s;
+}
+.home nav a i {
+  position: absolute;
+  right: -50px;
+  transition: right .2s;
+}
+.home nav a:hover i {
+  right: 15px;
+  transition: right .1s;
+}
+.home nav a:last-child {
+  margin-bottom: 0;
+}
+.line-1 {
+  height: 40px;
+  width: 500px;
+  background-color: #0c074b;
+  opacity: .4;
+  position: absolute;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  left: -5%;
+}
+.line-2 {
+  height: 100px;
+  width: 500px;
+  background-color: #075e90;
+  opacity: .4;
+  position: absolute;
+  -webkit-transform: rotate(41deg);
+  -moz-transform: rotate(41deg);
+  -ms-transform: rotate(41deg);
+  transform: rotate(41deg);
+  right: 25%;
+}
+.line-3 {
+  height: 60px;
+  width: 100%;
+  background-color: #0f5852;
+  opacity: .4;
+  position: absolute;
+  -webkit-transform: rotate(41deg);
+  -moz-transform: rotate(41deg);
+  -ms-transform: rotate(41deg);
+  transform: rotate(41deg);
+  right: -15%;
+}
+.line-4 {
+  height: 40px;
+  width: 100%;
+  background-color: #0c074b;
+  opacity: .4;
+  position: absolute;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  left: 10%;
+}
+.line-5 {
+  height: 100px;
+  width: 500px;
+  background-color: #0f5852;
+  opacity: .4;
+  position: absolute;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  left: 5%;
+}
+.home .content {
+  width: 450px;
+}
+.home h2 {
+  font-size: 36px;
+}
+@media (max-width: 480px) {
+  h2 {
+    width: 90%;
+    font-size: 24px!important;
+  }
+  nav {
+    width: 100%;
+  }
+  .home .content {
+    width: 100%;
+  }
+}

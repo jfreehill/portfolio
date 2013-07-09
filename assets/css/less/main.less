@@ -1,0 +1,156 @@
+/* ===========================
+ * Portfolio Site Styles
+ * Author: Jeremy Freehill
+ * Version: 0.1
+ * Note: Compiles from LESS
+ *============================= */
+
+
+@import url(http://fonts.googleapis.com/css?family=Pacifico|Raleway:900,500);
+/* Fontello */
+body {
+	background-color: #eaf385;
+	padding: 0;
+}
+
+@import "fontello.less";
+
+h1 {
+	font: 60px 'Raleway', sans-serif;
+	font-weight: 900;
+	text-align: center;
+	color: white;
+	margin: 0;
+	padding: 0;
+	line-height: 0.95em;
+}
+
+h2 {
+	font: 48px/1.125em 'Pacifico', cursive;
+	color: #1e4849;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+.content {
+	padding: 24px 0;
+	border-width: 8px;
+	margin: 0 auto 50px auto; 
+	-webkit-border-image:url("../img/bg-pattern-01.png") 8 0 8 0 repeat;
+}
+
+header {
+	background: #071158 url('../img/bg-header-full.jpg') center bottom no-repeat;
+	height: 170px;
+	border-bottom: 9px solid white;
+	margin-bottom: 22px;
+	position: relative;
+	overflow: hidden;
+	h1 {
+		position: absolute;
+		bottom: 10px;
+		left: 0;
+		right: 0;
+		text-shadow: 0 0 10px #071158;
+	}
+}
+
+.home nav {
+	width: 80%;
+	margin: 0 auto;
+	display: block;
+	
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	a {
+		font: 30px/1.75em 'Raleway', sans-serif;
+		font-weight: 900;
+		text-transform: uppercase;
+		text-shadow: 2px 2px 1 rgba(0, 0, 0, .5);
+		color: white;
+		display: block;
+		background: #05667b url("../img/bg-diag-right.png") no-repeat;
+		background-position: 400px center;
+		border-radius: 5px;
+		margin-bottom: 24px;
+		padding-left: 25px;
+		text-align: left;
+		position: relative;
+		overflow: hidden;
+		transition: background-color .2s, background-position .3s;
+		&:hover {
+			color: white;
+			text-decoration: none;
+			background-color: #3c057b;
+			background-position: left center;
+			transition: background-color .6s, background-position .3s;
+		}
+		i {
+			position: absolute;
+			right: -50px;
+			transition: right .2s;
+		}
+		&:hover i {
+			right: 15px;
+			transition: right .1s;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+.Line (@height, @width, @color, @rotation) {
+	height: @height;
+	width: @width;
+	background-color: @color;
+	opacity: .4;
+	position: absolute;
+	-webkit-transform: rotate(@rotation);
+	-moz-transform: rotate(@rotation);
+	-ms-transform: rotate(@rotation);
+	transform: rotate(@rotation);
+}
+.line-1 {
+	.Line(40px, 500px, #0c074b, 135deg);
+	left: -5%;
+}
+.line-2 {
+	.Line(100px, 500px, #075e90, 41deg);
+	right: 25%;
+}
+.line-3 {
+	.Line(60px, 100%, #0f5852, 41deg);
+	right: -15%;
+}
+.line-4 {
+	.Line(40px, 100%, #0c074b, 135deg);
+	left: 10%;
+}
+.line-5 {
+	.Line(100px, 500px, #0f5852, 135deg);
+	left: 5%;
+}
+
+.home {
+	.content {
+		width: 450px;
+	}
+	h2 {
+		font-size: 36px;
+	}
+}
+
+@media (max-width: 480px) {
+	h2 {
+		width: 90%;
+		font-size: 24px!important;
+	}
+	nav { width: 100%; }
+	.home {
+		.content { width: 100%; }
+	}
+}
+
