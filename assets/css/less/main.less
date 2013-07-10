@@ -23,15 +23,13 @@ h1 {
 	color: white;
 	margin: 0;
 	padding: 0;
-	line-height: 0.95em;
-}
+	line-height: 0.95em; }
 
 h2 {
 	font: 48px/1.125em 'Pacifico', cursive;
 	color: #1e4849;
 	text-align: center;
-	margin-bottom: 25px;
-}
+	margin-bottom: 25px; }
 
 .content {
 	padding: 24px 0;
@@ -57,14 +55,19 @@ header {
 }
 
 nav {
+	overflow: hidden;
 	margin: 0 auto;
 	display: block;
+	position: absolute;
+	top: 0; left: 0;
+
 	ul {
 		list-style: none;
 		padding: 0;
 		margin: 0;
 	}
 	a {
+		overflow: visible;
 		font: 30px/1.75em 'Raleway', sans-serif;
 		font-weight: 900;
 		text-transform: uppercase;
@@ -74,8 +77,9 @@ nav {
 		background-position: 400px center;
 		border-radius: 5px;
 		position: relative;
-		overflow: hidden;
-		padding: 9px 5px;
+		display:inline-block;
+
+		padding: 1px 5px;
 		transition: background-color .2s, background-position .3s;
 		&:hover {
 			color: white;
@@ -84,11 +88,75 @@ nav {
 			background-position: left center;
 			transition: background-color .6s, background-position .3s;
 		}
-
+		i {}
 	}
-	position: absolute;
-	left: 10px;
 }
+
+.wrap {
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+}
+.entries {
+	text-align: center;
+}
+.entry {
+	width: 275px;
+	height: 200px;
+	border-radius: 5px;
+	position: relative;
+	transition: all 0.2s;
+	display: inline-block;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	
+	vertical-align: top;
+
+	section,
+	a {
+		transition: all 0.1s;
+		color: white;
+		cursor: pointer;
+		width: 0; 
+		height: 0; 
+
+		i { font-size:30px; position: absolute; }
+	}
+
+	.info {
+		position: absolute;
+		top: -80px;
+		left: -88px;
+		border-top: 80px solid transparent;
+		border-bottom: 80px solid transparent;
+		border-left: 88px solid rgba(11, 73, 121, 0.8);
+		position: absolute;
+		i {
+			bottom: -40px; left: -84px;
+		}
+	}
+
+	a {
+		position: absolute;
+		bottom: -80px;
+		right: -80px;
+		border-top: 80px solid transparent;
+		border-bottom: 80px solid transparent;
+		border-right: 78px solid rgba(11, 19, 121, 0.75);
+		i {
+			top: -1.2em; right: -2.5em;
+		}
+	}
+	&:nth-child(3n) {
+		margin-right: 0;
+	}
+	&:hover {
+		.info { left: 0; }
+		a { right: 0; }
+	}
+}
+
 .Line (@height, @width, @color, @rotation) {
 	height: @height;
 	width: @width;
@@ -150,6 +218,12 @@ nav {
 				margin-bottom: 0;
 			}
 		}
+	}
+}
+
+.portfolio {
+	.wrap {
+		max-width: 908px;
 	}
 }
 

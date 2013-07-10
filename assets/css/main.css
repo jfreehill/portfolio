@@ -43,111 +43,85 @@ body {
 .icon-home:before {
   content: '\e81a';
 }
-/* '' */
 .icon-note:before {
   content: '\e804';
 }
-/* '' */
 .icon-note-beamed:before {
   content: '\e805';
 }
-/* '' */
 .icon-mail:before {
   content: '\e814';
 }
-/* '' */
 .icon-link-1:before {
   content: '\e812';
 }
-/* '' */
 .icon-help-circled:before {
   content: '\e80f';
 }
-/* '' */
 .icon-info-circled:before {
   content: '\e80e';
 }
-/* '' */
 .icon-code:before {
   content: '\e815';
 }
-/* '' */
 .icon-location:before {
   content: '\e819';
 }
-/* '' */
 .icon-article:before {
   content: '\e818';
 }
-/* '' */
 .icon-facebook:before {
   content: '\e807';
 }
-/* '' */
 .icon-beaker:before {
   content: '\e80c';
 }
-/* '' */
 .icon-gplus-squared:before {
   content: '\e80b';
 }
-/* '' */
 .icon-doc-text:before {
   content: '\e817';
 }
-/* '' */
 .icon-code-1:before {
   content: '\e816';
 }
-/* '' */
 .icon-angle-circled-left:before {
   content: '\e801';
 }
-/* '' */
 .icon-angle-circled-right:before {
   content: '\e800';
 }
-/* '' */
 .icon-angle-circled-up:before {
   content: '\e803';
 }
-/* '' */
 .icon-angle-circled-down:before {
   content: '\e802';
 }
-/* '' */
 .icon-link-ext-alt:before {
   content: '\e811';
 }
-/* '' */
 .icon-github-squared:before {
   content: '\e80a';
 }
-/* '' */
 .icon-facebook-squared:before {
   content: '\e808';
 }
-/* '' */
 .icon-linkedin-squared:before {
   content: '\e809';
 }
-/* '' */
 .icon-picture:before {
   content: '\e806';
 }
-/* '' */
 .icon-book-open:before {
   content: '\e80d';
 }
-/* '' */
 .icon-link:before {
   content: '\e810';
 }
-/* '' */
 .icon-link-2:before {
   content: '\e813';
 }
-/* '' */h1 {
+h1 {
   font: 60px 'Raleway', sans-serif;
   font-weight: 900;
   text-align: center;
@@ -184,10 +158,12 @@ header h1 {
   text-shadow: 0 0 10px #071158;
 }
 nav {
+  overflow: hidden;
   margin: 0 auto;
   display: block;
   position: absolute;
-  left: 10px;
+  top: 0;
+  left: 0;
 }
 nav ul {
   list-style: none;
@@ -195,6 +171,7 @@ nav ul {
   margin: 0;
 }
 nav a {
+  overflow: visible;
   font: 30px/1.75em 'Raleway', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
@@ -204,8 +181,8 @@ nav a {
   background-position: 400px center;
   border-radius: 5px;
   position: relative;
-  overflow: hidden;
-  padding: 9px 5px;
+  display: inline-block;
+  padding: 1px 5px;
   transition: background-color 0.2s, background-position 0.3s;
 }
 nav a:hover {
@@ -214,6 +191,72 @@ nav a:hover {
   background-color: #3c057b;
   background-position: left center;
   transition: background-color 0.6s, background-position 0.3s;
+}
+.wrap {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+.entries {
+  text-align: center;
+}
+.entry {
+  width: 275px;
+  height: 200px;
+  border-radius: 5px;
+  position: relative;
+  transition: all 0.2s;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  vertical-align: top;
+}
+.entry section,
+.entry a {
+  transition: all 0.1s;
+  color: white;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+.entry section i,
+.entry a i {
+  font-size: 30px;
+  position: absolute;
+}
+.entry .info {
+  top: -80px;
+  left: -88px;
+  border-top: 80px solid transparent;
+  border-bottom: 80px solid transparent;
+  border-left: 88px solid rgba(11, 73, 121, 0.8);
+  position: absolute;
+}
+.entry .info i {
+  bottom: -40px;
+  left: -84px;
+}
+.entry a {
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  border-top: 80px solid transparent;
+  border-bottom: 80px solid transparent;
+  border-right: 78px solid rgba(11, 19, 121, 0.75);
+}
+.entry a i {
+  top: -1.2em;
+  right: -2.5em;
+}
+.entry:nth-child(3n) {
+  margin-right: 0;
+}
+.entry:hover .info {
+  left: 0;
+}
+.entry:hover a {
+  right: 0;
 }
 .line-1 {
   height: 40px;
@@ -303,6 +346,9 @@ nav a:hover {
 }
 .home nav a:last-child {
   margin-bottom: 0;
+}
+.portfolio .wrap {
+  max-width: 908px;
 }
 @media (max-width: 480px) {
   h2 {
