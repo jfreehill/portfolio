@@ -103,7 +103,11 @@ nav {
 .entry {
 	width: 275px;
 	height: 200px;
-	border-radius: 5px;
+	border-radius: 7px;
+	
+	/* below seems to fix a strange rendering bug in Chrome with 
+	background clipping on elements with a border radius */
+	border: 1px solid transparent; 
 	position: relative;
 	transition: all 0.2s;
 	display: inline-block;
@@ -144,7 +148,15 @@ nav {
 		border-top: 80px solid transparent;
 		border-bottom: 80px solid transparent;
 		border-right: 78px solid rgba(11, 19, 121, 0.75);
+		// right: -10px;
+		// bottom : 0px;
+		// display: block;
+		// background-color: rgba(11, 19, 121, 0.75);
+		// height: 50px;
+		// width: 50px;
+
 		i {
+			// top: 0; left: 0;
 			top: -1.2em; right: -2.5em;
 		}
 	}
@@ -153,7 +165,10 @@ nav {
 	}
 	&:hover {
 		.info { left: 0; }
-		a { right: 0; }
+		a { 
+			right: 0px;
+			//-webkit-transform: translate(-80px);
+		}
 	}
 }
 

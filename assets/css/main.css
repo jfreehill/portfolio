@@ -203,7 +203,11 @@ nav a:hover {
 .entry {
   width: 275px;
   height: 200px;
-  border-radius: 5px;
+  border-radius: 7px;
+  /* below seems to fix a strange rendering bug in Chrome with 
+	background clipping on elements with a border radius */
+
+  border: 1px solid transparent;
   position: relative;
   transition: all 0.2s;
   display: inline-block;
@@ -256,7 +260,7 @@ nav a:hover {
   left: 0;
 }
 .entry:hover a {
-  right: 0;
+  right: 0px;
 }
 .line-1 {
   height: 40px;
