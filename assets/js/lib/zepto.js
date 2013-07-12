@@ -98,7 +98,6 @@ var Zepto = (function() {
   function flatten(array) { return array.length > 0 ? $.fn.concat.apply([], array) : array }
   camelize = function(str){ return str.replace(/-+(.)?/g, function(match, chr){ return chr ? chr.toUpperCase() : '' }) }
   function dasherize(str) {
-    console.log(str);
     return str.replace(/::/g, '/')
            .replace(/([A-Z]+)([A-Z][a-z])/g, '$1_$2')
            .replace(/([a-z\d])([A-Z])/g, '$1_$2')
@@ -608,7 +607,6 @@ var Zepto = (function() {
         })
     },
     data: function(name, value){
-      console.log('data used', name, this);
       var data = this.attr('data-' + dasherize(name), value)
       return data !== null ? deserializeValue(data) : undefined
     },
@@ -647,7 +645,6 @@ var Zepto = (function() {
     css: function(property, value){
       if (arguments.length < 2 && typeof property == 'string')
         return this[0] && (this[0].style[camelize(property)] || getComputedStyle(this[0], '').getPropertyValue(property))
-      console.log('point1');
       var css = ''
       if (type(property) == 'string') {
         if (!value && value !== 0)

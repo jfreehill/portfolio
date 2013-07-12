@@ -3,6 +3,7 @@
 <head>
 	<title>Jeremy Freehill | Portfolio</title>
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/zepto-tooltip.min.css" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 
 </head>
@@ -17,10 +18,10 @@
     </header>
 	<section class="wrap">
 	    <nav class="small">
-    		<a href="index.htm" data-toggle="tooltip" title="Home"><i class="icon-home"></i></a>
-    		<a href="#resume" data-toggle="tooltip" title="Resume"><i class="icon-doc-text"></i></a>
-    		<a href="#contact" data-toggle="tooltip" title="Contact"><i class="icon-mail"></i></a>
-    		<a href="#labs" data-toggle="tooltip" title="Labs"><i class="icon-beaker"></i></a>
+    		<a href="index.htm" rel="tooltip"><i class="icon-home"></i><p>Home</p></a>
+    		<a href="#resume" rel="tooltip" ><i class="icon-doc-text"></i><p>Resume</p></a>
+    		<a href="#contact" rel="tooltip"><i class="icon-mail"></i><p>Contact</p></a>
+    		<a href="#labs" rel="tooltip" ><i class="icon-beaker"></i><p>Labs</p></a>
 	    </nav>
 	    <h2><i class="icon-picture"></i>Portfolio</h2>
 	    <section class="content">
@@ -46,9 +47,8 @@
 	<footer>
 	</footer>
 
-	<script type="text/javascript" src="assets/js/lib/zepto.js"></script>
-	<script>window.jQuery = Zepto;//to make zepto work with bootstrap</script>
-	<script type="text/javascript" src="assets/js/lib/bootstrap.js"></script>
+	<script type="text/javascript" src="assets/js/lib/zepto.min.js"></script>
+
 	<script type="text/javascript" src="assets/js/behavior.js"></script>
 </body>
 </html>

@@ -805,7 +805,6 @@
 
   $.fn.tooltip = function ( option ) {
     return this.each(function () {
-      console.log('run');
       var $this = $(this)
         , data = $this.data('tooltip')
         , options = typeof option == 'object' && option
