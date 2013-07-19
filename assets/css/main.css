@@ -254,9 +254,12 @@ nav a p:before {
   margin-right: 20px;
   margin-bottom: 20px;
   overflow: hidden;
-  box-sizing: padding-box;
+  box-sizing: border-box;
   vertical-align: top;
   z-index: 3;
+}
+.entry img {
+  min-height: 100%;
 }
 .entry section,
 .entry a {
@@ -319,11 +322,12 @@ nav a p:before {
 }
 .entry .info h1 {
   font-weight: 900;
-  line-height: .8em;
+  line-height: 1.125em;
 }
 .entry .info h2 {
   font-size: 16px;
   font-weight: 500;
+  margin-top: 3px;
 }
 .entry .info.active {
   top: 0;
