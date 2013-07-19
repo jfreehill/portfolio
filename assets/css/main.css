@@ -5,12 +5,19 @@
  * Version: 0.1
  * Note: Compiles from LESS
  *============================= */
-/* Fontello */
+/* apply a natural box layout model to all elements
+   reco by Paul Irish: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body {
   background-color: #eaf385;
   padding: 0;
   -webkit-font-smoothing: antialiased;
 }
+/* Fontello */
 @font-face {
   font-family: 'fontello';
   src: url('../font/fontello.eot?10023086');
@@ -51,6 +58,9 @@ body {
 }
 .icon-mail:before {
   content: '\e814';
+}
+.icon-cancel:before {
+  content: '\e81b';
 }
 .icon-link-1:before {
   content: '\e812';
@@ -141,6 +151,7 @@ h2 {
   border-width: 8px;
   margin: 0 auto 50px auto;
   -webkit-border-image: url("../img/bg-pattern-01.png") 8 0 8 0 repeat;
+  border-image: url("../img/bg-pattern-01.png") 8 0 8 0 repeat;
 }
 header {
   background: #071158 url('../img/bg-header-full.jpg') center bottom no-repeat;
@@ -177,7 +188,7 @@ nav a {
   color: white;
   background: #05667b url("../img/bg-diag-right.png") no-repeat;
   background-position: 400px center;
-  border-radius: 5px;
+  border-radius: 3px;
   position: relative;
   display: inline-block;
   padding: 1px 5px;
@@ -207,10 +218,10 @@ nav a p {
   opacity: 0;
   font-weight: 700;
   padding: 5px 10px;
-  border-radius: 0 5px 5px 5px;
+  border-radius: 0 3px 3px 3px;
   display: none;
   transition: all 0.5s;
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
 }
 nav a p:before {
   content: "";
@@ -232,7 +243,7 @@ nav a p:before {
 .entry {
   width: 275px;
   height: 200px;
-  border-radius: 7px;
+  border-radius: 5px;
   /* below seems to fix a strange rendering bug in Chrome with 
 	background clipping on elements with a border radius */
 
@@ -243,7 +254,9 @@ nav a p:before {
   margin-right: 20px;
   margin-bottom: 20px;
   overflow: hidden;
+  box-sizing: padding-box;
   vertical-align: top;
+  z-index: 3;
 }
 .entry section,
 .entry a {
@@ -258,18 +271,6 @@ nav a p:before {
   font-size: 30px;
   position: absolute;
 }
-.entry .info {
-  top: -80px;
-  left: -88px;
-  border-top: 80px solid transparent;
-  border-bottom: 80px solid transparent;
-  border-left: 88px solid rgba(11, 73, 121, 0.8);
-  position: absolute;
-}
-.entry .info i {
-  bottom: -40px;
-  left: -84px;
-}
 .entry a {
   position: absolute;
   bottom: -80px;
@@ -277,15 +278,60 @@ nav a p:before {
   border-top: 80px solid transparent;
   border-bottom: 80px solid transparent;
   border-right: 78px solid rgba(11, 19, 121, 0.75);
+  z-index: 2;
 }
 .entry a i {
   top: -1.2em;
   right: -2.5em;
 }
+.entry .info-button {
+  top: -80px;
+  left: -88px;
+  border-top: 80px solid transparent;
+  border-bottom: 80px solid transparent;
+  border-left: 88px solid rgba(11, 73, 121, 0.8);
+  position: absolute;
+  z-index: 2;
+}
+.entry .info-button i {
+  bottom: -40px;
+  left: -84px;
+}
+.entry .info {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  background-color: rgba(11, 73, 121, 0.8);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-top: 80px;
+  padding-left: 12px;
+  padding-right: 20px;
+  z-index: 1;
+}
+.entry .info h1,
+.entry .info h2 {
+  font: 18px 'Raleway', sans-serif;
+  color: white;
+  text-align: left;
+  text-transform: uppercase;
+}
+.entry .info h1 {
+  font-weight: 900;
+  line-height: .8em;
+}
+.entry .info h2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.entry .info.active {
+  top: 0;
+}
 .entry:nth-child(3n) {
   margin-right: 0;
 }
-.entry:hover .info {
+.entry:hover .info-button {
   left: 0;
 }
 .entry:hover a {
