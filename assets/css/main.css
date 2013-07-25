@@ -16,6 +16,7 @@ body {
   background-color: #eaf385;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  font-size: 16px;
 }
 /* Fontello */
 @font-face {
@@ -132,7 +133,7 @@ body {
   content: '\e813';
 }
 h1 {
-  font: 60px 'Raleway', sans-serif;
+  font: 3.75em 'Raleway', sans-serif;
   font-weight: 900;
   text-align: center;
   color: white;
@@ -141,7 +142,7 @@ h1 {
   line-height: 0.95em;
 }
 h2 {
-  font: 48px/1.125em 'Pacifico', cursive;
+  font: 3em/1.125em 'Pacifico', cursive;
   color: #1e4849;
   text-align: center;
   margin-bottom: 25px;
@@ -181,10 +182,9 @@ nav ul {
   margin: 0;
 }
 nav a {
-  font: 30px/1.75em 'Raleway', sans-serif;
+  font: 1.875em/1.75em 'Raleway', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
-  text-shadow: 2px 2px 1 rgba(0, 0, 0, 0.5);
   color: white;
   background: #05667b url("../img/bg-diag-right.png") no-repeat;
   background-position: 400px center;
@@ -305,7 +305,6 @@ nav a p:before {
   height: 100%;
   position: absolute;
   top: 0;
-  background-color: rgba(11, 73, 121, 0.8);
   box-sizing: border-box;
   border-radius: 4px;
   padding-top: 80px;
@@ -315,7 +314,7 @@ nav a p:before {
 }
 .entry .info h1,
 .entry .info h2 {
-  font: 18px 'Raleway', sans-serif;
+  font: 1.125em 'Raleway', sans-serif;
   color: white;
   text-align: left;
   text-transform: uppercase;
@@ -325,7 +324,7 @@ nav a p:before {
   line-height: 1.125em;
 }
 .entry .info h2 {
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 500;
   margin-top: 3px;
 }
@@ -405,7 +404,7 @@ nav a p:before {
   width: 450px;
 }
 .home h2 {
-  font-size: 36px;
+  font-size: 2.25em;
 }
 .home nav {
   position: relative;
@@ -434,13 +433,34 @@ nav a p:before {
 .portfolio .wrap {
   max-width: 908px;
 }
+.color-1 {
+  background-color: rgba(11, 73, 121, 0.8);
+}
+.color-2 {
+  background-color: rgba(7, 94, 144, 0.9);
+}
+.color-3 {
+  background-color: rgba(12, 7, 75, 0.8);
+}
+.color-4 {
+  background-color: rgba(15, 88, 82, 0.8);
+}
 @media (max-width: 987px) {
+  body {
+    font-size: 14px;
+  }
+  h2 i {
+    display: none;
+  }
   .entry:nth-child(3n),
   .entry {
     margin-right: 20px;
   }
   .entry:nth-child(2n) {
     margin-right: 0;
+  }
+  .wrap {
+    width: 80%;
   }
 }
 @media (max-width: 480px) {

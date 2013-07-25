@@ -1,5 +1,17 @@
 ;
 
+$('.entry .info').each(function(){
+	var n;
+	function rand(){	
+		var r = Math.round(Math.random()*4);
+		if (r < 1) r++;
+		return r;
+	}
+	n = rand();
+	$(this).addClass('color-'+n);
+	
+})
+
 $('.info-button').on('click', toggleInfo);
 
 function toggleInfo(){
