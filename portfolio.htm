@@ -27,15 +27,7 @@
 	    <h2><i class="icon-picture"></i>Portfolio</h2>
 	    <section class="content">
 	    	<section class="entries">
-		    	<li class="entry">
-		    		<img src="assets/img/thumbs/pullups_memorygame.jpg">
-		    		<section class="info-button"><i class="icon-cancel"></i></section>
-		    		<a href="#"  title="Link &raquo;" target="_new"><i class="icon-link-2"></i></a>
-		    		<section class="info">
-		    			<h1>Pull-Ups Memory Game</h1>
-		    			<h2>Full Development</h2>
-		    		</section>
-		    	</li>
+	    		<!-- entries added via JS template and JSON -->
 	    	</section>
 	    </section>
 	</section>
@@ -48,8 +40,8 @@
 		<section class="info-button"><i class="icon-cancel"></i></section>
 		<a href="{{=entry.link}}"  title="Link &raquo;" target="_new"><i class="icon-link-2"></i></a>
 		<section class="info">
-			<h1>{{=entry.title}}</h1>
-			<h2>{{=entry.role}}</h2>
+			<h1 class="client">{{=entry.client}}</h1>
+			<h2 class="project">{{=entry.project}}</h2>
 		</section>
 	</li>
 	{{~}}

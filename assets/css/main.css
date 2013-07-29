@@ -351,6 +351,7 @@ nav a p:before {
   font-size: 1em;
   font-weight: 500;
   margin-top: 3px;
+  margin-bottom: 3px;
 }
 .entry .info.active {
   top: -100%;
