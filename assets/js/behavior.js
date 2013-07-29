@@ -1,18 +1,31 @@
 ;
-
-$('.entry .info').each(function(){
-	var n;
-	function rand(){	
-		var r = Math.round(Math.random()*4);
-		if (r < 1) r++;
-		return r;
-	}
-	n = rand();
-	$(this).addClass('color-'+n);
-	
+$.getJSON('assets/data/portfolio.json', function(data){
+	renderEntryData(data);
 });
 
-$('.info-button').on('click', toggleInfo);
+function renderEntryData (data) {
+	if (typeof data !== "object") return;
+	var entryTemplate = doT.template(document.getElementById('entryTemplate').text);
+	var entryRender = entryTemplate(data);
+	$('section.entries').html(entryRender);
+	viewRender();
+}
+
+function viewRender(){
+	$('.entry .info').each(function(){
+		var n;
+		function rand(){	
+			var r = Math.round(Math.random()*4);
+			if (r < 1) r++;
+			return r;
+		}
+		n = rand();
+		$(this).addClass('color-'+n);
+	});
+	$('.info-button').on('click', toggleInfo);
+}
+
+
 
 function toggleInfo(){
 	var _this = this;
@@ -24,6 +37,7 @@ function toggleInfo(){
 $('.open-menu').on('click', function(e){
 	e.preventDefault();
 	$('nav.small').toggleClass('open');
+	$(this).toggleClass('active');
 	$(this).children('i').eq(0).toggleClass('icon-menu icon-angle-circled-up')
 });
 

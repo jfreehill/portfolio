@@ -1,0 +1,70 @@
+{
+	"entries": [
+		{
+			"title": "Jim Beam Honey - Experiential",
+			"role": "Full Development",
+			"thumb": "beam_honey.jpg",
+			"link": "http://jimbeamhoneybear.com"
+		},
+		{
+			"title": "Pinnacle - Brand Site",
+			"role": "Full Development",
+			"thumb": "pinnacle_brand.jpg",
+			"link": "http://pinnaclevodka.com"
+		},
+		{
+			"title": "Pinnacle - Recipe Finder",
+			"role": "Full Development",
+			"thumb": "pinnacle_recipes.jpg",
+			"link": "http://fb.pinnaclevodka.com/recipes-new/"
+		},
+		{
+			"title": "CDW - Solutions Blog",
+			"role": "Full Development",
+			"thumb": "cdw_solutionsblog.jpg",
+			"link": "http://cdwsolutionsblog.com/"
+		},
+		{
+			"title": "Ashford - Cloud Campus",
+			"role": "Front-End Development",
+			"thumb": "ashford_parallax.jpg",
+			"link": "http://bright.ashford.edu/"
+		},
+		{
+			"title": "Ashford - Belong",
+			"role": "Full Development",
+			"thumb": "ashford_simple.jpg",
+			"link": "http://belong.ashford.edu/"
+		},
+		{
+			"title": "Pull-Ups Memory Game",
+			"role": "Full Development",
+			"thumb": "pullups_memorygame.jpg",
+			"link": false
+		},
+		{
+			"title": "JMK Remodeling",
+			"role": "Design & Development",
+			"thumb": "jmkremodeling.jpg",
+			"link": "http://jmkremodeling.com"
+		},
+		{
+			"title": "LR Hein Construction",
+			"role": "Design & Development",
+			"thumb": "lrhein.jpg",
+			"link": "http://lrhein.com"
+		},
+		{
+			"title": "Roman - Brand Site",
+			"role": "Full Development",
+			"thumb": "roman_brand.jpg",
+			"link": "http://roman.com"
+		},
+		{
+			"title": "Gruntwork Game Site",
+			"role": "Design & Development",
+			"thumb": "gruntwork.jpg",
+			"link": "http://game.colum.edu/projects/GruntWork/"
+		}
+	]
+}

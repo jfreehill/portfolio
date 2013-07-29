@@ -4,7 +4,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<title>Jeremy Freehill | Portfolio</title>
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="assets/css/zepto-tooltip.min.css" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 
 </head>
@@ -28,62 +27,7 @@
 	    <h2><i class="icon-picture"></i>Portfolio</h2>
 	    <section class="content">
 	    	<section class="entries">
-		    	<div class="entry">
-		    		<img src="assets/img/thumbs/beam_honey.jpg">
-		    		<section class="info-button"><i class="icon-cancel"></i></section>
-		    		<a href="http://jimbeamhoneybear.com/" title="Link &raquo;" target="_new"><i class="icon-link-2"></i></a>
-		    		<section class="info">
-		    			<h1>Jim Beam Honey - Experiential</h1>
-		    			<h2>Full Development</h2>
-		    		</section>
-		    	</div>
-				<div class="entry">
-		    		<img src="assets/img/thumbs/pinnacle_brand.jpg">
-		    		<section class="info-button"><i class="icon-cancel"></i></section>
-		    		<a href="http://pinnaclevodka.com" title="Link &raquo;" target="_new"><i class="icon-link-2"></i></a>
-		    		<section class="info">
-		    			<h1>Pinnacle - Brand Site</h1>
-		    			<h2>Full Development</h2>
-		    		</section>
-		    	</div>
-		    	<div class="entry">
-		    		<img src="assets/img/thumbs/pinnacle_recipes.jpg">
-		    		<section class="info-button"><i class="icon-cancel"></i></section>
-		    		<a href="http://fb.pinnaclevodka.com/recipes-new/" title="Link &raquo;" target="_new"><i class="icon-link-2"></i></a>
-		    		<section class="info">
-		    			<h1>Pinnacle - Recipe Finder</h1>
-		    			<h2>Full Development</h2>
-		    		</section>
-		    	</div>
-		    	<div class="entry">
-		    		<img src="assets/img/thumbs/cdw_solutionsblog.jpg">
-		    		<section class="info-button"><i class="icon-cancel"></i></section>
-		    		<a href="http://cdwsolutionsblog.com" title="Link &raquo;" target="_new"><i class="icon-link-2"></i></a>
-		    		<section class="info">
-		    			<h1>CDW - Solutions Blog</h1>
-		    			<h2>Full Development</h2>
-		    		</section>
-		    	</div>
-
-		    	<div class="entry">
-		    		<img src="assets/img/thumbs/ashford_parallax.jpg">
-		    		<section class="info-button"><i class="icon-cancel"></i></section>
-		    		<a href="http://bright.ashford.edu/" title="Link &raquo;" target="_new"><i class="icon-link-2"></i></a>
-		    		<section class="info">
-		    			<h1>Ashford - Cloud Campus</h1>
-		    			<h2>Front-End Development</h2>
-		    		</section>
-		    	</div>
-				<div class="entry">
-		    		<img src="assets/img/thumbs/ashford_simple.jpg">
-		    		<section class="info-button"><i class="icon-cancel"></i></section>
-		    		<a href="#"  title="Link &raquo;" target="_new"><i class="icon-link-2"></i></a>
-		    		<section class="info">
-		    			<h1>Ashford - Belong</h1>
-		    			<h2>Full Development</h2>
-		    		</section>
-		    	</div>
-		    	<div class="entry">
+		    	<li class="entry">
 		    		<img src="assets/img/thumbs/pullups_memorygame.jpg">
 		    		<section class="info-button"><i class="icon-cancel"></i></section>
 		    		<a href="#"  title="Link &raquo;" target="_new"><i class="icon-link-2"></i></a>
@@ -91,15 +35,29 @@
 		    			<h1>Pull-Ups Memory Game</h1>
 		    			<h2>Full Development</h2>
 		    		</section>
-		    	</div>
+		    	</li>
 	    	</section>
 	    </section>
 	</section>
 	<footer>
 	</footer>
+	<script id="entryTemplate" type="text/x-dot-template">
+	{{~it.entries :entry:index}}
+	<li class="entry">
+		<img src="assets/img/thumbs/{{=entry.thumb}}">
+		<section class="info-button"><i class="icon-cancel"></i></section>
+		<a href="{{=entry.link}}"  title="Link &raquo;" target="_new"><i class="icon-link-2"></i></a>
+		<section class="info">
+			<h1>{{=entry.title}}</h1>
+			<h2>{{=entry.role}}</h2>
+		</section>
+	</li>
+	{{~}}
+	</script>
+
 
 	<script type="text/javascript" src="assets/js/lib/zepto.min.js"></script>
-
+	<script type="text/javascript" src="assets/js/doT.min.js"></script>
 	<script type="text/javascript" src="assets/js/behavior.js"></script>
 </body>
 </html>
