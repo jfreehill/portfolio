@@ -252,8 +252,11 @@ nav a p:before {
 .open-menu.active {
   background-color: #3c057b;
 }
-.open-menu:hover {
+.open-menu:hover,
+.open-menu:link,
+.open-menu:visited {
   color: white;
+  outline: none;
 }
 .wrap {
   position: relative;
@@ -562,10 +565,10 @@ nav a p:before {
     position: relative;
     overflow: hidden;
     height: 0;
-    -webkit-transition: 1s all;
-    -moz-transition: 1s all;
-    -o-transition: 1s all;
-    transition: 1s all;
+    -webkit-transition: .6s all;
+    -moz-transition: .6s all;
+    -o-transition: .6s all;
+    transition: .6s all;
   }
   nav.small.open {
     height: 184px;
