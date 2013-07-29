@@ -476,6 +476,9 @@ nav a p:before {
   body {
     font-size: 14px;
   }
+  header {
+    background-size: 100% auto;
+  }
   h2 i {
     display: none;
   }
@@ -515,6 +518,9 @@ nav a p:before {
   }
 }
 @media (max-width: 640px) {
+  header {
+    background-size: 100% 100%;
+  }
   h1 {
     font-size: 3.5em;
   }
