@@ -560,19 +560,16 @@ nav.mobile {
     background-color: inherit;
     -webkit-transform: translateY(-184px);
     -moz-transform: translateY(-184px);
-    -ms-transform: translateY(-184px);
     -o-transform: translateY(-184px);
     transform: translateY(-184px);
-    -webkit-transition: 1s all;
-    -moz-transition: 1s all;
-    -ms-transition: 1s all;
-    -o-transition: 1s all;
-    transition: 1s all;
+    -webkit-transition: 0.6s -webkit-transform 0.1s;
+    -moz-transition: 0.6s -moz-transform 0.1s;
+    -o-transition: 0.6s -o-transform 0.1s;
+    transition: .6s transform .1s;
   }
   .wrap.open {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0);
   }
@@ -581,6 +578,9 @@ nav.mobile {
     height: 72px;
     margin-right: 0;
     margin-bottom: 10px;
+  }
+  .entry h2 {
+    padding-top: 3px;
   }
   .entry .info {
     padding-top: 20px;
@@ -597,7 +597,7 @@ nav.mobile {
   .open-menu {
     display: inline-block;
   }
-  nav {
+  nav.small {
     display: none;
   }
   nav.mobile {
