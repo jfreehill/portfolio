@@ -340,8 +340,14 @@ AddDefaultCharset utf-8
 # | Compression                                                                |
 # ------------------------------------------------------------------------------
 
-<IfModule mod_deflate.c>
+# BEGIN GZIP
+<ifmodule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/json application/x-javascript application/javascript
+</ifmodule>
+# END GZIP
 
+<IfModule mod_deflate.c>
+    
     # Force compression for mangled headers.
     # http://developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping
     <IfModule mod_setenvif.c>
@@ -357,8 +363,6 @@ AddDefaultCharset utf-8
     #  as `AddOutputFilterByType` is still in the core directives).
     <IfModule mod_filter.c>
         AddOutputFilterByType DEFLATE application/atom+xml \
-                                      application/javascript \
-                                      application/json \
                                       application/rss+xml \
                                       application/vnd.ms-fontobject \
                                       application/x-font-ttf \
@@ -368,11 +372,7 @@ AddDefaultCharset utf-8
                                       font/opentype \
                                       image/svg+xml \
                                       image/x-icon \
-                                      text/css \
-                                      text/html \
-                                      text/plain \
-                                      text/x-component \
-                                      text/xml
+                                      text/x-component
     </IfModule>
 
 </IfModule>
