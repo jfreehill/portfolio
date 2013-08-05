@@ -396,6 +396,18 @@ nav {
 }
 
 @media (max-width: 640px) {
+	body {
+		&.open {
+			-webkit-transform: translateX(50%);
+			-moz-transform: translateX(50%);
+			-o-transform: translateX(50%);
+			transform: translateX(50%);
+		}
+		-webkit-transition: .6s -webkit-transform .1s;
+		-moz-transition: .6s -moz-transform .1s;
+		-o-transition: .6s -o-transform .1s;
+		transition: .6s transform .1s;
+	}
 	header { background-size: 100% 100%; }
 	h1 { font-size: 3.5em; }
 	h2 {
@@ -409,22 +421,7 @@ nav {
 	}
 	.wrap {
 		width: 100%;
-		background-color: inherit;
-		-webkit-transform: translateY(-184px);
-		-moz-transform: translateY(-184px);
-		-o-transform: translateY(-184px);
-		transform: translateY(-184px);
-		-webkit-transition: .6s -webkit-transform .1s;
-		-moz-transition: .6s -moz-transform .1s;
-		-o-transition: .6s -o-transform .1s;
-		transition: .6s transform .1s;
 
-		&.open {
-			-webkit-transform: translateY(0);
-			-moz-transform: translateY(0);
-			-o-transform: translateY(0);
-			transform: translateY(0);
-		}
 	}
 	.entry {
 		width: 95%;
@@ -443,17 +440,15 @@ nav {
 	.content { padding: 1.5em 0; }
 	
 	.open-menu { display: inline-block; }
-	nav.small { display: none; }
-	nav.mobile {
+	// nav.small { display: none; }
+	nav.small {
+		-webkit-transform: translateZ(0);
 		display: block;
-		position: relative;
-		overflow: hidden;
-		width: 100%;
-		// height: 0;
-
-		top: 0;
-		left: 0;
-	
+		position: fixed;
+		width: 50%;
+		height: 100%;
+		left: 0%;
+		top: 0px;
 		
 		a {
 			width: 100%;
