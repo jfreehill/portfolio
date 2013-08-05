@@ -481,7 +481,9 @@ FileETag None
 # ------------------------------------------------------------------------------
 # | File concatenation                                                         |
 # ------------------------------------------------------------------------------
-
+<IfModule mod_headers.c>
+   Header set Connection Keep-Alive
+</IfModule>
 # Allow concatenation from within specific CSS and JS files, e.g.:
 # Inside of `script.combined.js` you could have
 #   <!--#include file="libs/jquery.js" -->
