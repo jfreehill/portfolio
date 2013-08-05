@@ -39,7 +39,7 @@ function toggleInfo(){
 
 $('.open-menu').on('click', function(e){
 	e.preventDefault();
-	$('nav.small').toggleClass('open');
+	$('.wrap').toggleClass('open');
 	$(this).toggleClass('active');
 	$(this).children('i').eq(0).toggleClass('icon-menu icon-angle-circled-up')
 });
