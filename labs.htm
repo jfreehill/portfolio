@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 
 </head>
-<body class="portfolio">
+<body class="experiments">
     <header>
     	<div class="line-1"></div>
     	<div class="line-2"></div>
@@ -21,10 +21,10 @@
     		<a href="index.htm" rel="tooltip"><i class="icon-home"></i><p>Home</p></a>
     		<a href="#resume" rel="tooltip" ><i class="icon-doc-text"></i><p>Resume</p></a>
     		<a href="#contact" rel="tooltip"><i class="icon-mail"></i><p>Contact</p></a>
-    		<a href="labs.htm" rel="tooltip" ><i class="icon-beaker"></i><p>Labs</p></a>
+    		<a href="#labs" rel="tooltip" ><i class="icon-beaker"></i><p>Labs</p></a>
 	    </nav>
 	    <a class="open-menu" href="#"><i class="icon-menu"></i></a>
-	    <h2><i class="icon-picture"></i>Portfolio</h2>
+	    <h2><i class="icon-beaker"></i>Experiments</h2>
 	    <section class="content">
 	    	<section class="entries">
 	    		<!-- entries added via JS template and JSON -->
@@ -33,19 +33,7 @@
 	</section>
 	<footer>
 	</footer>
-	<script id="entryTemplate" type="text/x-dot-template">
-	{{~it.entries :entry:index}}
-	<li class="entry">
-		<img src="assets/img/thumbs/{{=entry.thumb}}">
-		<section class="info-button"><i class="icon-cancel"></i></section>
-		<a href="{{=entry.link}}"  title="Link &raquo;" target="_new"><i class="icon-link-2"></i></a>
-		<section class="info">
-			<h1 class="client">{{=entry.client}}</h1>
-			<h2 class="project">{{=entry.project}}</h2>
-		</section>
-	</li>
-	{{~}}
-	</script>
+
 
 
 	<script type="text/javascript" src="assets/js/lib/zepto.min.js"></script>
