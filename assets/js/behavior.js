@@ -1,9 +1,9 @@
 ;
 
 if ($('body').hasClass('portfolio')) {
-	$.getJSON('assets/data/portfolio.json', function(data){
-		renderEntryData(data);
-	});
+	//$.getJSON('assets/data/portfolio.json', function(data){
+		renderEntryData(portfolio.data);
+	//});
 }
 
 function renderEntryData (data) {
@@ -40,7 +40,5 @@ $('.open-menu').on('click', function(e){
 	$(this).toggleClass('active');
 	$('.wrap').toggleClass('open');
 	$(this).children('i').eq(0).toggleClass('icon-menu icon-angle-circled-up');
-	//TweenLite.to('nav.small', 0.6, {height: 184});
-	console.log('passed tween')
 });
 
