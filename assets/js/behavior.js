@@ -1,9 +1,7 @@
 ;
 
 if ($('body').hasClass('portfolio')) {
-	//$.getJSON('assets/data/portfolio.json', function(data){
-		renderEntryData(portfolio.data);
-	//});
+	renderEntryData(portfolio.data);
 }
 
 function renderEntryData (data) {
