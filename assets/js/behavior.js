@@ -28,8 +28,6 @@ function viewRender(){
 	$('.info-button').on('click', toggleInfo);
 }
 
-
-
 function toggleInfo(){
 	var _this = this;
 	$(_this).siblings('.info').add(_this).toggleClass('active');
@@ -39,8 +37,10 @@ function toggleInfo(){
 
 $('.open-menu').on('click', function(e){
 	e.preventDefault();
-	$('body').toggleClass('open');
 	$(this).toggleClass('active');
-	$(this).children('i').eq(0).toggleClass('icon-menu icon-angle-circled-left')
+	$('.wrap').toggleClass('open');
+	$(this).children('i').eq(0).toggleClass('icon-menu icon-angle-circled-up');
+	//TweenLite.to('nav.small', 0.6, {height: 184});
+	console.log('passed tween')
 });
 
