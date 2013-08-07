@@ -1,5 +1,11 @@
 ;
 
+var lines = 5;
+for (n = 0; n < lines; n++) {
+	var line = $('<div>').attr('class', 'line-'+(n+1));
+	$('header').eq(0).prepend(line);
+}
+
 if ($('body').hasClass('portfolio')) {
 	renderEntryData(portfolio.data);
 }
