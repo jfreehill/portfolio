@@ -516,3 +516,10 @@ FileETag None
 <IfModule mod_headers.c>
    Header set Connection Keep-Alive
 </IfModule>
+
+<IfModule pagespeed_module>
+    ModPagespeedLoadFromFile "http://jeremy.freehill.me/assets/" \
+        "/var/www/vhosts/freehill.me/jeremy/assets/"
+    ModPagespeedLoadFromFileRuleMatch Disallow \.htaccess$
+    ModPagespeedLoadFromFileRuleMatch Disallow \.git$
+</IfModule>
