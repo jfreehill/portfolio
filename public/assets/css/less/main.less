@@ -1,0 +1,502 @@
+/* ===========================
+ * Portfolio Site Styles
+ * Author: Jeremy Freehill
+ * Version: 0.1
+ * Note: Compiles from LESS
+ *============================= */
+
+/* apply a natural box layout model to all elements
+   reco by Paul Irish: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+	background-color: #eaf385;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	font-size: 16px;	
+}
+
+/* Fontello */
+@import "fontello.less";
+
+h1 {
+	font: 3.75em 'Raleway', sans-serif;
+	font-weight: 900;
+	text-align: center;
+	color: white;
+	margin: 0;
+	padding: 0;
+	line-height: 0.95em; }
+
+h2 {
+	font: 3em/1.125em 'Pacifico', cursive;
+	color: #1e4849;
+	text-align: center;
+	margin-bottom: 25px; 
+	margin-top: 0;
+}
+
+.content {
+	padding: 24px 0;
+	border-width: 8px 0;
+	margin: 0 auto 50px auto; 
+	-webkit-border-image:url("../img/bg-pattern-01.png") 8 0 8 0 repeat;
+
+	border-image:url("../img/bg-pattern-01.png") 8 0 8 0 repeat;
+}
+
+header {
+	background: #071158 url('../img/bg-header-full.jpg') center bottom no-repeat;
+	height: 170px;
+	border-bottom: 9px solid white;
+	margin-bottom: 22px;
+	position: relative;
+	overflow: hidden;
+	h1 {
+		position: absolute;
+		text-transform: uppercase;
+		bottom: 10px;
+		left: 0;
+		right: 0;
+		text-shadow: 0 0 10px #071158;
+	}
+}
+
+nav {
+	//overflow: hidden;
+	margin: 0 auto;
+	display: block;
+	position: absolute;
+	top: 0; left: 0;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	a {
+		overflow: visible;
+		font: 1.875em/1.75em 'Raleway', sans-serif;
+		font-weight: 900;
+		text-transform: uppercase;
+		color: white;
+		background: #05667b url("../img/bg-diag-right.png") no-repeat;
+		background-position: 400px center;
+		border-radius: 3px;
+		margin-right: 5px;
+		position: relative;
+		display:inline-block;
+		padding: 1px 5px;
+		transition: background-color .2s, background-position .3s;
+		
+		overflow: visible;
+		&:hover {
+			color: white;
+			text-decoration: none;
+			background-color: #3c057b;
+			background-position: left center;
+			transition: background-color .6s, background-position .3s;
+
+			p {
+				display: block;
+				bottom: -51px;
+				opacity: 1;
+				transition: all 0.6s;
+			}
+		}
+		p {	
+			position: absolute;
+			text-align: center;
+			background-color: rgba(11, 19, 121, 0.75);
+			bottom: -66px;
+			left:00px;
+			font: 18px "Raleway";
+			opacity: 0;
+			font-weight: 700;
+			padding: 5px 10px;
+			border-radius: 0 3px 3px 3px;
+			display: none;
+			transition: all 0.5s;
+			box-shadow: 0 2px 1px rgba(0,0,0, .1);
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: -10px;
+				left: 0px;
+				border-left: 15px solid transparent;
+				border-right: 15px solid transparent;
+				border-bottom: 10px solid rgba(11, 19, 121, 0.75);
+			}
+		}
+	}
+	&.mobile {
+		display: none;
+	}
+}
+
+.open-menu {
+	display: none;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	background-color: #05667b;
+	border-radius: 0 0 3px 3px;
+	box-shadow: inset 0 4px 1px rgba(0,0,0,.2);
+	margin-left: 2%;
+	line-height: 50px;
+	color: white;
+	text-align: center;
+	font-size: 2em;
+	float: left;
+	
+	&.active { background-color: #3c057b; }
+	&:hover,
+	&:link,
+	&:visited { color: white; outline: none; }
+}
+
+.wrap {
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+}
+.entries {
+	text-align: center;
+}
+.entry {
+	width: 275px;
+	height: 200px;
+	border-radius: 5px;
+
+	/* below seems to fix a strange rendering bug in Chrome with 
+	background clipping on elements with a border radius */
+	border: 1px solid transparent; 
+	position: relative;
+	transition: all 0.2s;
+	display: inline-block;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	box-sizing: border-box;
+	
+	vertical-align: top;
+	z-index: 3;
+
+	img { min-height: 100%; }
+
+	section,
+	a {
+		transition: all 0.1s;
+		color: white;
+		cursor: pointer;
+		width: 0; 
+		height: 0; 
+
+		i { position: absolute; }
+	}
+
+	a {
+		position: absolute;
+		bottom: -80px;
+		right: -80px;
+		border-top: 80px solid transparent;
+		border-bottom: 80px solid transparent;
+		border-right: 78px solid rgba(11, 19, 121, 0.75);
+		z-index: 2;
+
+		i {
+			font-size: 26px; top: -1.5em; right: -2.75em;
+		}
+	}
+
+	.info-button {
+		position: absolute;
+		top: -80px;
+		left: -88px;
+		border-top: 80px solid transparent;
+		border-bottom: 80px solid transparent;
+		border-left: 88px solid rgba(11, 73, 121, 0.8);
+		position: absolute;
+		z-index: 2;
+
+		i {
+			font-size:30px; bottom: -40px; left: -84px;
+		}
+	}
+
+	.info {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+
+		box-sizing: border-box;
+		border-radius: 4px;
+		padding-top: 80px;
+		padding-left: 12px;
+		padding-right: 20px;
+		z-index: 1;
+
+		h1, h2 {
+			font: 1.125em 'Raleway', sans-serif;
+			color: white;
+			text-align: left;
+			text-transform: uppercase;
+		}
+		h1 { font-weight: 900; line-height: 1.125em; }
+		h2 { font-size: 1em; font-weight: 500; margin-top: 3px; margin-bottom: 3px;}
+
+		&.active {
+			top: -100%;
+		}
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+	&:nth-child(3n) {
+		margin-right: 0;
+	}
+	&:hover {
+		.info-button { left: 0; }
+		a { 
+			right: 0px;
+			//-webkit-transform: translate(-80px);
+		}
+	}
+}
+
+.Line (@height, @width, @color, @rotation) {
+	height: @height;
+	width: @width;
+	background-color: @color;
+	opacity: .4;
+	position: absolute;
+	-webkit-transform: rotate(@rotation);
+	-moz-transform: rotate(@rotation);
+	-ms-transform: rotate(@rotation);
+	transform: rotate(@rotation);
+}
+.line-1 {
+	.Line(40px, 500px, #0c074b, 135deg);
+	left: -5%;
+}
+.line-2 {
+	.Line(100px, 500px, #075e90, 41deg);
+	right: 25%;
+}
+.line-3 {
+	.Line(60px, 100%, #0f5852, 41deg);
+	right: -15%;
+}
+.line-4 {
+	.Line(40px, 100%, #0c074b, 135deg);
+	left: 10%;
+}
+.line-5 {
+	.Line(100px, 500px, #0f5852, 135deg);
+	left: 5%;
+}
+
+.home {
+	.content { 
+		width: 450px; 
+	}
+	h2 { 
+		font-size: 2.25em; 
+	}
+	nav {
+		position: relative;
+		left: 0;
+		width: 80%;
+		a {
+			display: block;
+			margin-bottom: 14px;
+			margin-right: 0;
+			padding: 0 0 0 25px;
+			text-align: left; 
+			overflow: hidden;
+			i {
+				position: absolute;
+				right: -50px;
+				transition: right .2s;
+			}
+			&:hover i {
+				right: 15px;
+				transition: right .1s;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.portfolio {
+	.wrap {
+		max-width: 908px;
+	}
+}
+
+.experiments {
+	background-color: white;
+	header {
+		border-bottom-color: #c0237c;
+	}
+	h1 {
+		font-weight: 900;
+	}
+	h2 {
+		color: #605474;
+		i {
+			color: #c0237c;
+		}
+	}
+}
+
+.color-1 { background-color: rgba(7, 94, 144, 0.9) }
+.color-2 { background-color: rgba(12, 7, 75, 0.8) }
+.color-3 { background-color: rgba(15, 88, 82, 0.8) }
+
+@media (max-width: 987px) {
+	body { font-size: 14px; }
+	header { background-size: 100% auto; }
+	h2 {
+		i {
+			display: none;
+		}
+	}
+	
+	.entry { 
+		margin-right: 20px;
+		height: 150px;
+
+		.info { padding-top: 60px; }
+	 	.info-button { display: none; }
+	 	a {	right: 0; }
+		&:nth-child(3n) { margin-right: 20px; }
+		&:nth-child(2n) { margin-right: 0; }
+	 }
+	
+	
+	.wrap {
+		width: 80%;
+	}
+}
+
+@media (max-width: 737px) {
+	body {
+		font-size: 12px;
+	}
+	.entry {
+		width: 45%;
+		height: 100px;
+
+		.info {
+			padding-top: 30px;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	header { background-size: 100% 100%; z-index: 2; }
+	h1 { font-size: 3.5em; }
+	h2 {
+		font-size: 2.5em;
+		padding-top: .75em;
+		margin-bottom: .75em;
+	}
+	header {
+		margin-bottom: 0;
+		height: 120px;
+	}
+	.wrap {
+		width: 100%;
+		background-color: inherit;
+		-webkit-transform: translateY(-200px);
+		-moz-transform: translateY(-200px);
+		-o-transform: translateY(-200px);
+		transform: translateY(-200px);
+		-webkit-transition: .6s -webkit-transform .05s;
+		-moz-transition: .6s -moz-transform .05s;
+		-o-transition: .6s -o-transform .05s;
+		transition: .6s transform .05s;
+
+		&.open {
+			-webkit-transform: translateY(0);
+			-moz-transform: translateY(0);
+			-o-transform: translateY(0);
+			transform: translateY(0);
+		}
+	}
+	.entry {
+		width: 95%;
+		height: 72px;
+		margin-right: 0;
+		margin-bottom: 10px;
+		h2 { padding-top: 3px; }
+		.info {
+			padding-top: 20px;
+		}
+		img {
+			width: 100%;
+		}
+		&:nth-child(3n) { margin-right: 0; }
+	}
+	.content { padding: 1.5em 0; }
+	
+	.open-menu { display: inline-block; }
+
+	nav.small {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		height: 200px;
+
+		top: 0;
+		left: 0;
+	
+		
+		a {
+			width: 100%;
+			height: 50px;
+			line-height: 46px;
+			border-radius: 0;
+			border-bottom: 1px solid rgba(0,0,0, 0.2);
+			background-image: none;
+			p { 
+				opacity: 1;
+				display: inline-block; 
+				position: relative;
+				bottom: 0;
+				border: none; box-shadow: none; background: none;
+			}
+			p:before {
+				display: none;
+			}
+		}
+	}
+
+	.home {
+		h2 {
+			font-size: 26px;
+		}
+		nav {
+			width: 95%;
+
+			a { height: 40px; margin-bottom: 10px; }
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	h2 {
+		
+	}
+	nav { width: 100%; }
+	.home {
+		.content { width: 100%; }
+	}
+}
+
