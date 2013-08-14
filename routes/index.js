@@ -8,7 +8,10 @@
 // };
 
 exports.index = function(req, res){
-	res.render('index', {page: "home", title: "Web Designer & Developer"});
+	res.render('index', {
+		slug: "home", 
+		title: "Web Designer & Developer"
+	});
 };
 
 exports.portfolio = function(req, res){
@@ -22,10 +25,18 @@ exports.portfolio = function(req, res){
 			return;
 		}
 		jsonData = JSON.parse(data);
-		res.render('portfolio', {data: jsonData, page: "portfolio", title: "Portfolio"});
+		res.render('portfolio', {
+			data: jsonData, 
+			slug: "portfolio", 
+			title: "Portfolio"
+		});
 	});
 };
 
 exports.lab = function(req, res){
-	res.sendfile('./views/lab.htm');
+	res.render('portfolio', {
+			//data: jsonData, 
+			slug: "lab", 
+			title: "Portfolio"
+		});
 };

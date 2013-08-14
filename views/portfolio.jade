@@ -10,14 +10,16 @@ block content
 			| #{title}
 		section.content
 			section.entries
-				each entry in data.entries
-					li(class="entry")
-						img(src='/assets/img/thumbs/#{entry.thumb}')
-						section.info-button
-							i.icon-cancel
-						a(href='#{entry.link}', target='_new')
-							i.icon-link-2
-						section.info
-							h1.client #{entry.client}
-							h2.project #{entry.project}
+				//- only display entries if data is passed
+				if data
+					each entry in data.entries
+						li(class="entry")
+							img(src='/assets/img/thumbs/#{entry.thumb}')
+							section.info-button
+								i.icon-cancel
+							a(href='#{entry.link}', target='_new')
+								i.icon-link-2
+							section.info
+								h1.client #{entry.client}
+								h2.project #{entry.project}
 						
