@@ -37,6 +37,6 @@ exports.lab = function(req, res){
 	res.render('portfolio', {
 			//data: jsonData, 
 			slug: "lab", 
-			title: "Portfolio"
+			title: "Experiments"
 		});
 };
