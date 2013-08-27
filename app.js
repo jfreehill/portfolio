@@ -29,9 +29,10 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneWeek }));
 
 // development only
 if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
-  app.locals.pretty = true;
-  app.set('view cache', false);
+	app.use(express.logger('dev'));
+  	app.use(express.errorHandler());
+  	app.locals.pretty = true;
+  	app.set('view cache', false);
 }
 
 app.get('/', routes.index);
