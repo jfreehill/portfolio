@@ -12,21 +12,20 @@ var express = require('express')
 
 var app = express();
 
+var oneDay = 86400000;
+
 // all environments
+
+
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.set('view cache', true);
+
 app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.static(__dirname + '/public'));
 app.use(express.compress());
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-
-
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneDay }));
 
 // development only
 if ('development' == app.get('env')) {
