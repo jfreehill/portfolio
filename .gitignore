@@ -3,6 +3,7 @@ Procfile
 ########################
 # node.js / npm
 ########################
+config.js
 lib-cov
 *.seed
 *.log

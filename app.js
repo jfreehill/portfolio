@@ -17,7 +17,6 @@ var oneWeek = oneDay * 7;
 
 // all environments
 
-
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
@@ -31,15 +30,14 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneWeek }));
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
- // app.locals.pretty = true;
+  app.locals.pretty = true;
+  app.set('view cache', false);
 }
 
-//app.get('/', function(req, res) {});
 app.get('/', routes.index);
 app.get('/portfolio', routes.portfolio);
 app.get('/lab', routes.lab);
-//app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+  console.log('Express server listening on port ' + app.get('port') + ' w/ environment: ' + app.get('env'));
 });
