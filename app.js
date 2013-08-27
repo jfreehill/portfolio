@@ -13,6 +13,7 @@ var express = require('express')
 var app = express();
 
 var oneDay = 86400000;
+var oneWeek = oneDay * 7;
 
 // all environments
 
@@ -25,7 +26,7 @@ app.set('view cache', true);
 app.use(express.favicon());
 app.use(express.compress());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneDay }));
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneWeek }));
 
 // development only
 if ('development' == app.get('env')) {
