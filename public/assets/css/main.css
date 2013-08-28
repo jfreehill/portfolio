@@ -470,19 +470,19 @@ nav.mobile {
 .portfolio .wrap {
   max-width: 908px;
 }
-.experiments {
+.lab {
   background-color: white;
 }
-.experiments header {
+.lab header {
   border-bottom-color: #c0237c;
 }
-.experiments h1 {
+.lab h1 {
   font-weight: 900;
 }
-.experiments h2 {
+.lab h2 {
   color: #605474;
 }
-.experiments h2 i {
+.lab h2 i {
   color: #c0237c;
 }
 .color-1 {
