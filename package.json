@@ -1,12 +1,35 @@
 {
-  "name": "application-name",
+  "name": "portfolio",
   "version": "0.0.1",
-  "private": true,
+  "description": "My portfolio site.",
+  "homepage": "https://github.com/jfreehill/portfolio",
+  "bugs": "https://github.com/jfreehill/portfolio/issues",
+  "author": {
+    "name": "Jeremy Freehill",
+    "email": "jfreehill@gmail.com",
+    "url": "http://jeremy.freehill.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jfreehill/yeoman-test"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
     "express": "3.3.4",
-    "jade": "*"
+    "jade": "*",
+    "requirejs": "~2.1.8"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.0"
   }
 }
