@@ -486,17 +486,32 @@ nav.mobile {
 .lab h2 i {
   color: #c0237c;
 }
-.color-1 {
-  background-color: rgba(11, 73, 121, 0.8);
-}
-.color-2 {
+.color-0 {
   background-color: rgba(7, 94, 144, 0.9);
 }
-.color-3 {
+.color-1 {
   background-color: rgba(12, 7, 75, 0.8);
 }
-.color-4 {
+.color-2 {
   background-color: rgba(15, 88, 82, 0.8);
+}
+.wf-loading h1,
+.wf-loading h2,
+.wf-loading p {
+  opacity: 0;
+}
+.wf-loading a {
+  color: rgba(255, 255, 255, 0);
+}
+.wf-active h1,
+.wf-active h2,
+.wf-active p {
+  opacity: 1;
+  -webkit-transition: opacity 0.25s;
+}
+.wf-active a {
+  color: #ffffff;
+  -webkit-transition: color 0.25s;
 }
 @media (max-width: 987px) {
   body {

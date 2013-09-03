@@ -354,10 +354,30 @@ nav {
 	}
 }
 
-.color-1 { background-color: rgba(11, 73, 121, 0.8); }
-.color-2 { background-color: rgba(7, 94, 144, 0.9) }
-.color-3 { background-color: rgba(12, 7, 75, 0.8) }
-.color-4 { background-color: rgba(15, 88, 82, 0.8) }
+//.color-4 { background-color: rgba(11, 73, 121, 0.8); }
+.color-0 { background-color: rgba(7, 94, 144, 0.9) }
+.color-1 { background-color: rgba(12, 7, 75, 0.8) }
+.color-2 { background-color: rgba(15, 88, 82, 0.8) }
+
+.wf-loading {
+	h1, h2, p {
+		opacity: 0;
+	}
+	a {
+		color: rgba(255,255,255,0);
+	}
+}
+
+.wf-active {
+	h1, h2, p {
+		opacity: 1;
+		-webkit-transition: opacity 0.25s;
+	}
+	a {
+		color: rgba(255,255,255,1);
+		-webkit-transition: color 0.25s;
+	}
+}
 
 @media (max-width: 987px) {
 	body { font-size: 14px; }
