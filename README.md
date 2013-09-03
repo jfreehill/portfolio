@@ -6,4 +6,5 @@ Repository for my site. Anybody can view the source anyway, so why not make it e
 hosted at: http://jeremy.freehill.me or http://jeremyfreehill.com
 
 **Unrelated to this repo:** 
-This page also acts as my testing ground for Google's [PageSpeed module for Apache](https://developers.google.com/speed/pagespeed/module). The results can be seen in viewing the source as hosted on my server. Add `ModPagespeed=off` as a query string to the URL to see what it looks like prior to formatting.
+One of my top goals for this site, beyond presenting my portfolio in a usable manner, is page performance. I've
+taken most possible measures to reach that goal and am pretty satisfied with [the results](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fjeremy.freehill.me).
