@@ -10,9 +10,9 @@
 
 	// Info icon toggles display of information on an entry
 	function toggleInfo(){
-		var _this = this;
-		$(_this).siblings('.info').add(_this).toggleClass('active');
-		var icon = $(_this).children('i').eq(0);
+		var $this = $(this);
+		$this.siblings('.info').add(_this).toggleClass('active');
+		var icon = $this.children('i').eq(0);
 		icon.toggleClass('icon-cancel icon-info-circled');
 	}
 
@@ -24,7 +24,7 @@
 	}
 
 	// Actions to take if on portfolio entries page
-	if (appData.currentPage = "portfolio") {
+	if (appData.currentPage == "portfolio") {
 		$('.entry .info').randomColorClass(3);
 		$('.info-button').on('click', toggleInfo);
 	}
