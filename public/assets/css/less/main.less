@@ -359,6 +359,12 @@ nav {
 .color-1 { background-color: rgba(12, 7, 75, 0.8) }
 .color-2 { background-color: rgba(15, 88, 82, 0.8) }
 
+h1, h2, p {
+	opacity: 0;
+}
+a {
+		color: rgba(255,255,255,0);
+}
 .wf-loading {
 	h1, h2, p {
 		opacity: 0;
@@ -372,10 +378,14 @@ nav {
 	h1, h2, p {
 		opacity: 1;
 		-webkit-transition: opacity 0.25s;
+		-moz-transition: opacity 0.25s;
+		transition: opacity 0.25s;
 	}
 	a {
 		color: rgba(255,255,255,1);
 		-webkit-transition: color 0.25s;
+		-moz-transition: color 0.25s;
+		transition: color 0.25s;
 	}
 }
 
