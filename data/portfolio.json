@@ -1,13 +1,16 @@
 {
 	"entries": [
 		{
+			"slug" : "beam-honey-experiential",
 			"client": "Jim Beam Honey",
 			"project": "Experiential",
 			"role": "Full Development",
 			"thumb": "beam_honey.jpg",
-			"link": "http://jimbeamhoneybear.com"
+			"link": "http://jimbeamhoneybear.com",
+			"features": ["Wordpress", "HTML 5", "CSS 3"]
 		},
-		{
+		{	
+			"slug" : "pinnacle-vodka-brand-site",
 			"client": "Pinnacle Vodka",
 			"project": "Brand Site",
 			"role": "Full Development",
@@ -15,13 +18,16 @@
 			"link": "http://pinnaclevodka.com"
 		},
 		{
+			"slug" : "pinnacle-vodka-recipe-finder",
 			"client": "Pinnacle Vodka",
 			"project": "Recipe Finder",
 			"role": "Full Development",
 			"thumb": "pinnacle_recipes.jpg",
-			"link": "http://fb.pinnaclevodka.com/recipes-new/"
+			"link": "http://fb.pinnaclevodka.com/recipes-new/",
+			"features": ["Wordpress", "HTML 5", "CSS 3"]
 		},
 		{
+			"slug" : "cdw-solutions-blog",
 			"client": "CDW",
 			"project": "Solutions Blog",
 			"role": "Full Development",
@@ -29,6 +35,7 @@
 			"link": "http://cdwsolutionsblog.com/"
 		},
 		{
+			"slug" : "ashford-cloud-campus",
 			"client": "Ashford University",
 			"project": "Cloud Campus",
 			"role": "Front-End Development",
@@ -36,6 +43,7 @@
 			"link": "http://bright.ashford.edu/"
 		},
 		{
+			"slug" : "ashford-belong",
 			"client": "Ashford University",
 			"project": "Belong",
 			"role": "Full Development",
@@ -43,6 +51,7 @@
 			"link": "http://belong.ashford.edu/"
 		},
 		{
+			"slug" : "pull-ups-memory-game",
 			"client": "Pull-Ups",
 			"project": "iPad Memory Game",
 			"role": "Full Development",
@@ -50,6 +59,7 @@
 			"link": false
 		},
 		{
+			"slug" : "jmk-remodeling",
 			"client": "JMK Remodeling",
 			"project": "Home Page",
 			"role": "Design & Development",
@@ -57,6 +67,7 @@
 			"link": "http://jmkremodelers.com"
 		},
 		{
+			"slug" : "lr-hein-construction",
 			"client": "LR Hein Construction",
 			"project": "Home Page",
 			"role": "Design & Development",
@@ -64,6 +75,7 @@
 			"link": "http://lrhein.com"
 		},
 		{
+			"slug" : "roman-home-page",
 			"client": "Roman",
 			"project": "Home Page",
 			"role": "Full Development",
@@ -71,6 +83,7 @@
 			"link": "http://roman.com"
 		},
 		{
+			"slug" : "gruntwork-game",
 			"client": "Gruntwork Game Site",
 			"project": "Home Page",
 			"role": "Design & Development",

@@ -14,13 +14,11 @@ block content
 				if appData
 					each entry in appData.entries
 						li(class="entry")
-							img(src='/assets/img/thumbs/#{entry.thumb}')
-							section.info-button
-								i.icon-cancel
-							if entry.link
-								a(href='#{entry.link}', target='_new')
+							a(href='portfolio/#{entry.slug}', target='_new')
+								img(src='/assets/img/thumbs/#{entry.thumb}')
+								span
 									i.icon-link-2
-							section.info
-								h1.client #{entry.client}
-								h2.project #{entry.project}
+								section.info
+									h1.client #{entry.client}
+									h2.project #{entry.project}
 						

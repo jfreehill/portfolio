@@ -50,7 +50,7 @@ fs.readFile(appDataFile, 'utf8', function(err, data){
 
 app.get('/', routes.index);
 app.get('/portfolio', routes.portfolio);
-app.get('/portfolio/:id', routes.portfolio_item);
+app.get('/portfolio/:item', routes.portfolio_item);
 app.get('/lab', routes.lab);
 
 app.get('/test', function(req, res){

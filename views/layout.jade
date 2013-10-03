@@ -1,5 +1,5 @@
 doctype 5
-html(lang='en')
+html(lang='en').wf-loading
 	head
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
 		link(rel='icon', type='image/png', href='/assets/img/favicon.png')
@@ -11,7 +11,8 @@ html(lang='en')
 	body(class=slug)
 
 		header
-			h1 Jeremy Freehill
+			h1 
+				a(href="/") Jeremy Freehill
 		block content
 
 		include includes/footer

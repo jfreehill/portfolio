@@ -60,6 +60,9 @@ header {
 		text-transform: uppercase;
 		text-shadow: 0 0 10px #071158;
 	}
+	a:hover {
+		text-decoration: none;
+	}
 }
 
 nav {
@@ -167,7 +170,7 @@ nav {
 }
 .entry {
 	width: 275px;
-	height: 200px;
+	height: 130px;
 	border-radius: 5px;
 
 	/* below seems to fix a strange rendering bug in Chrome with 
@@ -186,8 +189,7 @@ nav {
 
 	img { min-height: 100%; }
 
-	section,
-	a {
+	span {
 		transition: all 0.1s;
 		color: white;
 		cursor: pointer;
@@ -197,32 +199,18 @@ nav {
 		i { position: absolute; }
 	}
 
-	a {
+	span {
+		display: block;
 		position: absolute;
-		bottom: -80px;
-		right: -80px;
-		border-top: 80px solid transparent;
-		border-bottom: 80px solid transparent;
-		border-right: 78px solid rgba(11, 19, 121, 0.75);
+		bottom: -100px;
+		right: -100px;
+		border-top: 100px solid transparent;
+		border-bottom: 100px solid transparent;
+		border-right: 98px solid rgba(11, 19, 121, 0.75);
 		z-index: 2;
 
 		i {
-			font-size: 26px; top: -1.5em; right: -2.75em;
-		}
-	}
-
-	.info-button {
-		position: absolute;
-		top: -80px;
-		left: -88px;
-		border-top: 80px solid transparent;
-		border-bottom: 80px solid transparent;
-		border-left: 88px solid rgba(11, 73, 121, 0.8);
-		position: absolute;
-		z-index: 2;
-
-		i {
-			font-size:30px; bottom: -40px; left: -84px;
+			font-size: 26px; top: -1.75em; right: -3.25em;
 		}
 	}
 
@@ -234,7 +222,7 @@ nav {
 
 		box-sizing: border-box;
 		border-radius: 4px;
-		padding-top: 80px;
+		padding-top: 35px;
 		padding-left: 12px;
 		padding-right: 20px;
 		z-index: 1;
@@ -260,7 +248,7 @@ nav {
 	}
 	&:hover {
 		.info-button { left: 0; }
-		a { 
+		span { 
 			right: 0px;
 			//-webkit-transform: translate(-80px);
 		}
@@ -338,6 +326,29 @@ nav {
 	}
 }
 
+.portfolio-entry {
+	.client,
+	.project {
+		color: rgb(59, 47, 88);
+		text-align: right;
+		text-transform: uppercase;
+		font-size: 1.5em;
+	}
+	.client {
+		
+	}
+	.project {
+		font-family: "Raleway";
+		font-weight: 400;
+		font-size: 1em;
+	}
+	.wrap {
+		
+	}
+	//background-color: #3b818d;
+}
+
+
 .lab {
 	background-color: white;
 	header {
@@ -359,12 +370,6 @@ nav {
 .color-1 { background-color: rgba(12, 7, 75, 0.8) }
 .color-2 { background-color: rgba(15, 88, 82, 0.8) }
 
-h1, h2, p {
-	opacity: 0;
-}
-a {
-		color: rgba(255,255,255,0);
-}
 .wf-loading {
 	h1, h2, p {
 		opacity: 0;

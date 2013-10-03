@@ -1,0 +1,29 @@
+extends layout
+
+block content
+	section.wrap
+		include includes/nav
+		a.open-menu
+			i.icon-menu
+		h1.client #{entry.client}
+		h2.project #{entry.project}
+		section.content
+			section.full-entry
+				
+				//- only display entries if data is passed
+				img(src='/assets/img/thumbs/#{entry.thumb}')
+				
+				p #{entry.description}
+				
+				if entry.features
+					h3 Features:
+					ul
+					each feature in entry.features
+						li #{feature}
+				
+				if entry.link
+					a(href='#{entry.link}', target='_new')
+						| See It
+						i.icon-link-2
+			
+						
