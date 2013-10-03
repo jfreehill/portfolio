@@ -11,8 +11,8 @@ block content
 		section.content
 			section.entries
 				//- only display entries if data is passed
-				if data
-					each entry in data.entries
+				if appData
+					each entry in appData.entries
 						li(class="entry")
 							img(src='/assets/img/thumbs/#{entry.thumb}')
 							section.info-button

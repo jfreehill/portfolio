@@ -7,8 +7,10 @@ var config = require('./config');
 var express = require('express')
   , routes = require('./routes')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , fs = require('fs');
 
+var appDataFile ='./data/portfolio.json';
 var app = express();
 
 var oneDay = 86400000;
@@ -34,10 +36,24 @@ if ('development' == app.get('env')) {
   	app.set('view cache', false);
 }
 
+fs.readFile(appDataFile, 'utf8', function(err, data){
+	if (err) { 
+		console.log('Error: ' + err); 
+		return;
+	}
+	app.locals.appData = JSON.parse(data);
+
+	http.createServer(app).listen(app.get('port'), function(){
+  		console.log('Express server listening on port ' + app.get('port') + ' w/ environment: ' + app.get('env'));
+	});
+});
+
 app.get('/', routes.index);
 app.get('/portfolio', routes.portfolio);
+app.get('/portfolio/:id', routes.portfolio_item);
 app.get('/lab', routes.lab);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port') + ' w/ environment: ' + app.get('env'));
+app.get('/test', function(req, res){
+	res.send(app.locals.appData);
 });
+app.get('/route-test', routes.route_test);

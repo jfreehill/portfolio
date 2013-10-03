@@ -15,21 +15,21 @@ exports.index = function(req, res){
 };
 
 exports.portfolio = function(req, res){
+	res.render('portfolio', {
+		slug: "portfolio", 
+		title: "Portfolio"
+	});
+
+};
+
+exports.portfolio_item = function(req, res){
 	var fs = require('fs');
 	var file ='./data/portfolio.json';
 	var jsonData;
 
-	fs.readFile(file, 'utf8', function(err, data){
-		if (err) { 
-			console.log('Error: ' + err); 
-			return;
-		}
-		jsonData = JSON.parse(data);
-		res.render('portfolio', {
-			data: jsonData, 
-			slug: "portfolio", 
-			title: "Portfolio"
-		});
+	res.render('portfolio', {
+		slug: "portfolio", 
+		title: "Portfolio"
 	});
 };
 
@@ -39,4 +39,8 @@ exports.lab = function(req, res){
 			slug: "lab", 
 			title: "Experiments"
 		});
+};
+
+exports.route_test = function(req, res){
+
 };
