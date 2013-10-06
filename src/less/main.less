@@ -11,6 +11,7 @@
 
 body {
 	background-color: #eaf385;
+	background-image: url('../img/noise.png');
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
 	font-size: 16px;	
@@ -219,7 +220,7 @@ nav {
 		height: 100%;
 		position: absolute;
 		top: 0;
-
+		.color-0;
 		box-sizing: border-box;
 		border-radius: 4px;
 		padding-top: 44px;
@@ -239,6 +240,10 @@ nav {
 		&.active {
 			top: -100%;
 		}
+		//.color-4 { background-color: rgba(11, 73, 121, 0.8); }
+		&.color-0 { background-color: rgba(7, 94, 144, 0.9) }
+		&.color-1 { background-color: rgba(12, 7, 75, 0.8) }
+		&.color-2 { background-color: rgba(15, 88, 82, 0.8) }
 	}
 	&:last-child {
 		margin-right: 0;
@@ -327,23 +332,48 @@ nav {
 }
 
 .portfolio-entry {
+	.wrap {
+		max-width: 800px;
+		padding-top: 60px;
+	}
+	.content {
+		overflow: auto;
+	}
 	.client,
 	.project {
 		color: rgb(59, 47, 88);
-		text-align: right;
+		text-align: left;
 		text-transform: uppercase;
-		font-size: 1.5em;
-	}
-	.client {
-		
+		font-size: 2em;
 	}
 	.project {
 		font-family: "Raleway";
 		font-weight: 400;
-		font-size: 1em;
+		font-size: 1.5em;
 	}
-	.wrap {
-		
+	.left {
+		width: 40%;
+		float: left;
+	}
+	.right {
+		float: right;
+		width: 60%;
+	}
+
+	.see-it {
+		font: 1.5em/1.25em 'Raleway', sans-serif;
+		font-weight: 900;
+		text-transform: uppercase;
+		color: white;
+		background: #05667b url("../img/bg-diag-right.png") no-repeat;
+		background-position: 400px center;
+		&:hover {
+			color: white;
+			text-decoration: none;
+			background-color: #3c057b;
+			background-position: left center;
+			transition: background-color .6s, background-position .3s;
+		}
 	}
 	//background-color: #3b818d;
 }
@@ -366,10 +396,7 @@ nav {
 	}
 }
 
-//.color-4 { background-color: rgba(11, 73, 121, 0.8); }
-.color-0 { background-color: rgba(7, 94, 144, 0.9) }
-.color-1 { background-color: rgba(12, 7, 75, 0.8) }
-.color-2 { background-color: rgba(15, 88, 82, 0.8) }
+
 
 .wf-loading {
 	h1, h2, p {
@@ -406,9 +433,9 @@ nav {
 	
 	.entry { 
 		margin-right: 20px;
-		height: 150px;
+		height: 110px;
 
-		.info { padding-top: 60px; }
+		.info { padding-top: 40px; }
 	 	.info-button { display: none; }
 	 	a {	right: 0; }
 		&:nth-child(3n) { margin-right: 20px; }
@@ -449,7 +476,6 @@ nav {
 	}
 	.wrap {
 		width: 100%;
-		background-color: inherit;
 		-webkit-transform: translateY(-200px);
 		-moz-transform: translateY(-200px);
 		-o-transform: translateY(-200px);
