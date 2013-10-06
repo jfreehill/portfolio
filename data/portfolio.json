@@ -1,22 +1,45 @@
 {
 	"entries": [
 		{
+			"slug" : "ashford-cloud-campus",
+			"client": "Ashford University",
+			"project": "Cloud Campus",
+			"role": "Front-End Development",
+			"thumb": "ashford_parallax.jpg",
+			"link": "http://bright.ashford.edu/"
+		},
+		{
+			"slug" : "cdw-stadium",
+			"client": "CDW",
+			"project": "Stadium",
+			"role": "Full Development",
+			"thumb": "cdw_stadium.jpg",
+			"link": "http://cdwstadium.com/"
+		},
+		{
+			"slug" : "huggies-mom-inspired",
+			"client": "Kimberly-Clark",
+			"project": "Huggies Mom Inspired",
+			"role": "Full Development",
+			"thumb": "huggies_mom_inspired.jpg",
+			"link": "https://huggiesmominspired.com/"
+		},
+		{
 			"slug" : "beam-honey-experiential",
 			"client": "Jim Beam Honey",
 			"project": "Experiential",
 			"role": "Full Development",
 			"thumb": "beam_honey.jpg",
 			"link": "http://jimbeamhoneybear.com",
-			"features": ["Wordpress", "HTML 5", "CSS 3"],
-			"description": "The Jim Beam Honey site was "
+			"features": ["Wordpress", "HTML 5", "CSS 3"]
 		},
 		{
 			"slug" : "beam-jacobs-ghost",
 			"client": "Jim Beam Jacob's Ghost",
 			"project": "Experiential",
 			"role": "Full Development",
-			"thumb": "beam_honey.jpg",
-			"link": "http://jimbeamhoneybear.com",
+			"thumb": "beam_ghost.jpg",
+			"link": "http://jimbeamghost.com/photo/6m0ad4",
 			"features": ["Wordpress", "HTML 5", "CSS 3"],
 			"description": "The Jim Beam Honey site was "
 		},
@@ -38,22 +61,6 @@
 			"features": ["Wordpress", "HTML 5", "CSS 3"]
 		},
 		{
-			"slug" : "cdw-stadium",
-			"client": "CDW",
-			"project": "Stadium",
-			"role": "Full Development",
-			"thumb": "cdw_stadium.jpg",
-			"link": "http://cdwstadium.com/"
-		},
-		{
-			"slug" : "ashford-cloud-campus",
-			"client": "Ashford University",
-			"project": "Cloud Campus",
-			"role": "Front-End Development",
-			"thumb": "ashford_parallax.jpg",
-			"link": "http://bright.ashford.edu/"
-		},
-		{
 			"slug" : "pull-ups-memory-game",
 			"client": "Pull-Ups",
 			"project": "iPad Memory Game",
@@ -70,7 +77,7 @@
 			"link": "http://jmkremodelers.com"
 		},
 		{
-			"slug" : "lr-hein-construction",
+			"slug" : "lrhein-construction",
 			"client": "LR Hein Construction",
 			"project": "Home Page",
 			"role": "Design & Development",
@@ -78,7 +85,7 @@
 			"link": "http://lrhein.com"
 		},
 		{
-			"slug" : "roman-home-page",
+			"slug" : "roman-home",
 			"client": "Roman",
 			"project": "Home Page",
 			"role": "Full Development",
