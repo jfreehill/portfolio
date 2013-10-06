@@ -40,11 +40,19 @@ exports.portfolio_item = function(req, res){
 
 exports.lab = function(req, res){
 	res.render('portfolio', {
-			//data: jsonData, 
-			slug: "lab", 
-			title: "Experiments"
-		});
+		//data: jsonData, 
+		slug: "lab", 
+		title: "Experiments"
+	});
 };
+exports.about = function(req, res){
+	res.render('about', {
+		//data: jsonData, 
+		slug: "about", 
+		title: "About"
+	});
+};
+
 
 exports.route_test = function(req, res){
 	//res.send(req.app.locals.appData);

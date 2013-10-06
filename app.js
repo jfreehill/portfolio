@@ -8,12 +8,13 @@ var express = require('express')
   , routes = require('./routes')
   , http = require('http')
   , path = require('path')
-  , fs = require('fs');
+  , fs = require('fs')
+  , lessMiddleware = require('less-middleware');
 
 var appDataFile ='./data/portfolio.json';
 var app = express();
 
-var oneDay = 86400000;
+var oneDay = 24 * 60 * 60 * 1000;
 var oneWeek = oneDay * 7;
 
 // all environments
@@ -23,6 +24,13 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.set('view cache', true);
 
+app.use(lessMiddleware({
+	src: path.join(__dirname, 'src/less'),
+	dest: path.join(__dirname, 'public/assets/css'),
+	prefix: '/assets/css',
+	force: ('development' == app.get('env')),
+	compress: true
+}));
 app.use(express.favicon());
 app.use(express.compress());
 app.use(app.router);
@@ -45,6 +53,7 @@ fs.readFile(appDataFile, 'utf8', function(err, data){
 
 	http.createServer(app).listen(app.get('port'), function(){
   		console.log('Express server listening on port ' + app.get('port') + ' w/ environment: ' + app.get('env'));
+		console.log(path.join(__dirname, 'src/less'));
 	});
 });
 
@@ -52,6 +61,7 @@ app.get('/', routes.index);
 app.get('/portfolio', routes.portfolio);
 app.get('/portfolio/:item', routes.portfolio_item);
 app.get('/lab', routes.lab);
+app.get('/about', routes.about);
 
 app.get('/test', function(req, res){
 	res.send(app.locals.appData);
