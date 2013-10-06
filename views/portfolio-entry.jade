@@ -14,13 +14,15 @@ block content
 					//- only display entries if data is passed				
 					if entry.features
 						h3 Features:
-						ul
-						each feature in entry.features
-							li #{feature}
+						ul.features
+							each feature in entry.features
+								li #{feature}
 					if entry.link
 						a(href='#{entry.link}', target='_new').see-it
 							| See It
-							i.icon-link-2
+							i.icon-link-ext-alt
+					else
+						p.see-it No Link :(
 			
 				div.right
 					img(src='/img/gallery/#{entry.slug}-01.jpg')
