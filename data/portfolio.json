@@ -6,7 +6,8 @@
 			"project": "Cloud Campus",
 			"role": "Front-End Development",
 			"thumb": "ashford_parallax.jpg",
-			"link": "http://bright.ashford.edu/"
+			"link": "http://bright.ashford.edu/",
+			"features": ["Wordpress", "Parallax Effects", "Interactive Animation"]
 		},
 		{
 			"slug" : "cdw-stadium",
@@ -14,7 +15,8 @@
 			"project": "Stadium",
 			"role": "Full Development",
 			"thumb": "cdw_stadium.jpg",
-			"link": "http://cdwstadium.com/"
+			"link": "http://cdwstadium.com/",
+			"features" : ["Hash-based deeplinking", "YouTube iframe API", "Zepto JS"]
 		},
 		{
 			"slug" : "huggies-mom-inspired",
@@ -22,7 +24,8 @@
 			"project": "Huggies Mom Inspired",
 			"role": "Full Development",
 			"thumb": "huggies_mom_inspired.jpg",
-			"link": "https://huggiesmominspired.com/"
+			"link": "https://huggiesmominspired.com/",
+			"features": ["CSS3 with IE Support (CSS3 PIE)", "HTML 5"]
 		},
 		{
 			"slug" : "beam-honey-experiential",
@@ -31,7 +34,7 @@
 			"role": "Full Development",
 			"thumb": "beam_honey.jpg",
 			"link": "http://jimbeamhoneybear.com",
-			"features": ["Wordpress", "HTML 5", "CSS 3"]
+			"features": ["CodeIgniter MVC", "Webcam Capture", "Canvas Image Editing", "Facebook Image Share"]
 		},
 		{
 			"slug" : "beam-jacobs-ghost",
@@ -40,16 +43,17 @@
 			"role": "Full Development",
 			"thumb": "beam_ghost.jpg",
 			"link": "http://jimbeamghost.com/photo/6m0ad4",
-			"features": ["Wordpress", "HTML 5", "CSS 3"],
+			"features": ["Individual Consumer Page", "Facebook Sharing", "Mobile Styles"],
 			"description": "The Jim Beam Honey site was "
 		},
 		{	
-			"slug" : "pinnacle-vodka-brand-site",
+			"slug" : "pinnacle-vodka-home",
 			"client": "Pinnacle Vodka",
 			"project": "Brand Site",
 			"role": "Full Development",
 			"thumb": "pinnacle_brand.jpg",
-			"link": "http://pinnaclevodka.com"
+			"link": "http://pinnaclevodka.com",
+			"features": ["PHP", "Responsive Page Scaling", "Separate Mobile Site"]
 		},
 		{
 			"slug" : "pinnacle-vodka-recipe-finder",
@@ -58,7 +62,7 @@
 			"role": "Full Development",
 			"thumb": "pinnacle_recipes.jpg",
 			"link": "http://fb.pinnaclevodka.com/recipes-new/",
-			"features": ["Wordpress", "HTML 5", "CSS 3"]
+			"features": ["Facebook Tab", "Single Recipe Sharing", "AppData deeplinking", "jQote2 Templating"]
 		},
 		{
 			"slug" : "pull-ups-memory-game",
@@ -66,7 +70,8 @@
 			"project": "iPad Memory Game",
 			"role": "Full Development",
 			"thumb": "pullups_memorygame.jpg",
-			"link": false
+			"link": false,
+			"features": ["“Vanilla” JavaScript","iPad and Galaxy Tab Only", "CSS 3D Transforms", "HTML Audio"]
 		},
 		{
 			"slug" : "jmk-remodeling",
