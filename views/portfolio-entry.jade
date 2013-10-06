@@ -5,13 +5,13 @@ block content
 		include includes/nav
 		a.open-menu
 			i.icon-menu
-		h1.client #{entry.client}
-		h2.project #{entry.project}
+		
 		section.content
 			section.full-entry
-				
+				h1.client #{entry.client}
+				h2.project #{entry.project}
 				//- only display entries if data is passed
-				img(src='/assets/img/thumbs/#{entry.thumb}')
+				
 				
 				p #{entry.description}
 				
@@ -20,10 +20,11 @@ block content
 					ul
 					each feature in entry.features
 						li #{feature}
-				
-				if entry.link
-					a(href='#{entry.link}', target='_new')
-						| See It
-						i.icon-link-2
+				section.right-column
+					img(src='/img/thumbs/#{entry.thumb}')
+					if entry.link
+						a(href='#{entry.link}', target='_new').see-it
+							| See It
+							i.icon-link-2
 			
 						
