@@ -7,7 +7,18 @@
 			"role": "Full Development",
 			"thumb": "beam_honey.jpg",
 			"link": "http://jimbeamhoneybear.com",
-			"features": ["Wordpress", "HTML 5", "CSS 3"]
+			"features": ["Wordpress", "HTML 5", "CSS 3"],
+			"description": "The Jim Beam Honey site was "
+		},
+		{
+			"slug" : "beam-jacobs-ghost",
+			"client": "Jim Beam Jacob's Ghost",
+			"project": "Experiential",
+			"role": "Full Development",
+			"thumb": "beam_honey.jpg",
+			"link": "http://jimbeamhoneybear.com",
+			"features": ["Wordpress", "HTML 5", "CSS 3"],
+			"description": "The Jim Beam Honey site was "
 		},
 		{	
 			"slug" : "pinnacle-vodka-brand-site",
@@ -27,12 +38,12 @@
 			"features": ["Wordpress", "HTML 5", "CSS 3"]
 		},
 		{
-			"slug" : "cdw-solutions-blog",
+			"slug" : "cdw-stadium",
 			"client": "CDW",
-			"project": "Solutions Blog",
+			"project": "Stadium",
 			"role": "Full Development",
-			"thumb": "cdw_solutionsblog.jpg",
-			"link": "http://cdwsolutionsblog.com/"
+			"thumb": "cdw_stadium.jpg",
+			"link": "http://cdwstadium.com/"
 		},
 		{
 			"slug" : "ashford-cloud-campus",
@@ -41,14 +52,6 @@
 			"role": "Front-End Development",
 			"thumb": "ashford_parallax.jpg",
 			"link": "http://bright.ashford.edu/"
-		},
-		{
-			"slug" : "ashford-belong",
-			"client": "Ashford University",
-			"project": "Belong",
-			"role": "Full Development",
-			"thumb": "ashford_simple.jpg",
-			"link": "http://belong.ashford.edu/"
 		},
 		{
 			"slug" : "pull-ups-memory-game",

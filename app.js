@@ -24,10 +24,18 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.set('view cache', true);
 
+// development only
+if ('development' == app.get('env')) {
+	//app.use(express.logger('dev'));
+  	app.use(express.errorHandler());
+  	app.locals.pretty = true;
+  	app.set('view cache', false);
+}
+
 app.use(lessMiddleware({
 	src: path.join(__dirname, 'src/less'),
-	dest: path.join(__dirname, 'public/assets/css'),
-	prefix: '/assets/css',
+	dest: path.join(__dirname, 'public/css'),
+	prefix: '/css',
 	force: ('development' == app.get('env')),
 	compress: true
 }));
@@ -36,14 +44,21 @@ app.use(express.compress());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneWeek }));
 
-// development only
-if ('development' == app.get('env')) {
-	app.use(express.logger('dev'));
-  	app.use(express.errorHandler());
-  	app.locals.pretty = true;
-  	app.set('view cache', false);
-}
 
+
+// Define routes
+app.get('/', routes.index);
+app.get('/portfolio', routes.portfolio);
+app.get('/portfolio/:item', routes.portfolio_item);
+app.get('/lab', routes.lab);
+app.get('/about', routes.about);
+
+app.get('/test', function(req, res){
+	res.send(app.locals.appData);
+});
+app.get('/route-test', routes.route_test);
+
+// Load JSON data to memory and start server
 fs.readFile(appDataFile, 'utf8', function(err, data){
 	if (err) { 
 		console.log('Error: ' + err); 
@@ -57,13 +72,4 @@ fs.readFile(appDataFile, 'utf8', function(err, data){
 	});
 });
 
-app.get('/', routes.index);
-app.get('/portfolio', routes.portfolio);
-app.get('/portfolio/:item', routes.portfolio_item);
-app.get('/lab', routes.lab);
-app.get('/about', routes.about);
 
-app.get('/test', function(req, res){
-	res.send(app.locals.appData);
-});
-app.get('/route-test', routes.route_test);
