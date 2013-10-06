@@ -6,7 +6,8 @@ html(lang='en').wf-loading
 		link(rel='stylesheet', href='/css/bootstrap.min.css')
 		link(rel='stylesheet', href='/css/main.css')
 		script.
-			WebFontConfig = { google: {	families: ['Pacifico', 'Raleway:900, 500'] } };
+			// for async font loading
+			WebFontConfig = { google: { families: ['Pacifico', 'Raleway:900, 500'] } };
 			(function(){var e=document.createElement("script");e.src=("https:"==document.location.protocol?"https":"http")+"://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js";e.type="text/javascript";e.async="true";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
 	body(class=slug)
 
