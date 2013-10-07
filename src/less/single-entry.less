@@ -1,0 +1,99 @@
+// Portfolio Single Entry Page
+
+.single-entry {
+	.wrap {
+		max-width: 800px;
+		padding-top: 70px;
+	}
+	.content {
+		overflow: auto;
+	}
+	.client,
+	.project,
+	h3 {
+		color: rgb(59, 47, 88);
+		text-align: left;
+		text-transform: uppercase;
+		font-size: 2em;
+	}
+	.project {
+		font-family: "Raleway";
+		font-weight: 400;
+		font-size: 1.5em;
+		margin-bottom: 1.125em;
+	}
+	.left {
+		width: 40%;
+		float: left;
+	}
+	.right {
+		float: right;
+		width: 60%;
+		img {
+			border-radius: 3px;
+			border: 5px solid rgba(7, 94, 144, 0.9);
+		}
+	}
+	h3 { 
+		color: rgb(7, 94, 144);
+		font-size: 1.25em;
+		text-transform: uppercase; 
+		font-weight: 900;
+		margin-bottom: .5em; }
+	.features {
+		margin: .5em 0 2em 0;
+		padding-left: 0;
+		li {
+			font-size: 1em;
+			list-style-position: inside;
+			list-style-type: square;
+			margin-bottom: .125em;
+		}
+	}
+	.see-it {
+		font: 1.5em/1.25em 'Raleway', sans-serif;
+		font-weight: 900;
+		text-transform: uppercase;
+		color: white;
+		background: #05667b url("../img/bg-diag-right.png") no-repeat;
+		background-position: 200px center;
+		border-radius: 3px;
+		padding: .25em 40px .25em 25px;
+		width: 60%;
+		text-align: left; 
+		display: block;
+		position: relative;
+		transition: background-color .6s, background-position .3s;
+		i {
+			position: absolute;
+			right: 15px;
+		}
+		&:hover {
+			color: white;
+			text-decoration: none;
+			background-color: #3c057b;
+			background-position: left center;
+			transition: background-color .6s, background-position .3s;
+		}
+		i {
+			font-size: .8em;
+			margin-left: 10px;
+		}
+	}
+	@media (max-width: 640px) {
+		.wrap {
+			padding-top: 0;
+			position: relative;
+		}
+		.content {
+			padding-left: 2em;
+			padding-right: 2em;
+		}
+		.right,
+		.left {
+			float: none;
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+}

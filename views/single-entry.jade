@@ -11,6 +11,9 @@ block content
 				div.left
 					h1.client #{entry.client}
 					h2.project #{entry.project}
+				div.right
+					img(src='/img/gallery/#{entry.slug}-01.jpg')
+				div.left
 					//- only display entries if data is passed				
 					if entry.features
 						h3 Features:
@@ -24,7 +27,6 @@ block content
 					else
 						p.see-it No Link :(
 			
-				div.right
-					img(src='/img/gallery/#{entry.slug}-01.jpg')
-					
+				
+		div.content-cap
 						

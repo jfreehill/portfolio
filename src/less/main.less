@@ -39,228 +39,37 @@ h2 {
 h3, p, li, a {
 	font-family: 'Raleway', sans-serif;
 }
-.content {
-	padding: 24px 0;
-	border-width: 8px 0;
-	margin: 0 auto 50px auto; 
-	-webkit-border-image:url("../img/bg-pattern-01.png") 8 0 8 0 repeat;
-
-	border-image:url("../img/bg-pattern-01.png") 8 0 8 0 repeat;
-}
-
-header {
-	background: #071158 url('../img/bg-header-full.jpg') center bottom no-repeat;
-	height: 170px;
-	border-bottom: 9px solid white;
-	margin-bottom: 22px;
-	position: relative;
-	overflow: hidden;
-	h1 {
-		position: absolute;
-		bottom: 10px;
-		left: 0;
-		right: 0;
-		text-transform: uppercase;
-		text-shadow: 0 0 10px #071158;
-	}
-	a:hover {
-		text-decoration: none;
-	}
-}
-
-nav {
-	//overflow: hidden;
-	margin: 0 auto;
-	display: block;
-	position: absolute;
-	top: 0; left: 0;
-
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-	a {
-		overflow: visible;
-		font: 1.875em/1.75em 'Raleway', sans-serif;
-		font-weight: 900;
-		text-transform: uppercase;
-		color: white;
-		background: #05667b url("../img/bg-diag-right.png") no-repeat;
-		background-position: 400px center;
-		border-radius: 3px;
-		margin-right: 5px;
-		position: relative;
-		display:inline-block;
-		padding: 1px 5px;
-		transition: background-color .2s, background-position .3s;
-		
-		overflow: visible;
-		&:hover {
-			color: white;
-			text-decoration: none;
-			background-color: #3c057b;
-			background-position: left center;
-			transition: background-color .6s, background-position .3s;
-
-			p {
-				display: block;
-				bottom: -51px;
-				opacity: 1;
-				transition: all 0.6s;
-			}
-		}
-		p {	
-			position: absolute;
-			text-align: center;
-			background-color: rgba(11, 19, 121, 0.75);
-			bottom: -66px;
-			left:00px;
-			font: 18px "Raleway";
-			opacity: 0;
-			font-weight: 700;
-			padding: 5px 10px;
-			border-radius: 0 3px 3px 3px;
-			margin: 0 0 12px;
-			display: none;
-			transition: all 0.5s;
-			box-shadow: 0 2px 1px rgba(0,0,0, .1);
-
-			&:before {
-				content: "";
-				position: absolute;
-				top: -10px;
-				left: 0px;
-				border-left: 15px solid transparent;
-				border-right: 15px solid transparent;
-				border-bottom: 10px solid rgba(11, 19, 121, 0.75);
-			}
-		}
-	}
-	&.mobile {
-		display: none;
-	}
-}
-
-.open-menu {
-	display: none;
-	width: 50px;
-	height: 50px;
-	position: absolute;
-	background-color: #05667b;
-	border-radius: 0 0 3px 3px;
-	box-shadow: inset 0 4px 1px rgba(0,0,0,.2);
-	margin-left: 2%;
-	line-height: 50px;
+a {
 	color: white;
-	text-align: center;
-	font-size: 2em;
-	float: left;
-	
-	&.active { background-color: #3c057b; }
-	&:hover,
-	&:link,
-	&:visited { color: white; outline: none; }
 }
+.content {
+	padding: 32px 0 24px 0;
+	border-width: 8px 0;
+	margin: 0 auto 0 auto; 
+	//-webkit-border-image:url("../img/bg-pattern-01.png") 8 0 8 0 repeat;
+	//border-top: 8px solid transparent;
+	background: transparent url('../img/bg-pattern-01.png') repeat-x left -4px;
+	//border-image:url("../img/bg-pattern-01.png") 8 0 8 0 repeat;
+}
+.content-cap { 
+	width: 100%;
+	height: 8px;
+	margin-bottom: 1em; 
+	background: transparent url('../img/bg-pattern-01.png') repeat-x; }
+.legal { margin-bottom: 30px; }
+
+@import "header.less";
 
 .wrap {
 	position: relative;
 	width: 90%;
 	margin: 0 auto;
 }
-.entries {
-	text-align: center;
-}
-.entry {
-	width: 275px;
-	height: 130px;
-	border-radius: 5px;
 
-	/* below seems to fix a strange rendering bug in Chrome with 
-	background clipping on elements with a border radius */
-	border: 1px solid transparent; 
-	position: relative;
-	transition: all 0.2s;
-	display: inline-block;
-	margin-right: 20px;
-	margin-bottom: 20px;
-	overflow: hidden;
-	box-sizing: border-box;
-	
-	vertical-align: top;
-	z-index: 3;
-
-	img { min-height: 100%; }
-
-	span {
-		transition: all 0.1s;
-		color: white;
-		cursor: pointer;
-		width: 0; 
-		height: 0; 
-
-		i { position: absolute; }
-	}
-
-	span {
-		display: block;
-		position: absolute;
-		bottom: -100px;
-		right: -100px;
-		border-top: 100px solid transparent;
-		border-bottom: 100px solid transparent;
-		border-right: 98px solid rgba(11, 19, 121, 0.75);
-		z-index: 2;
-
-		i {
-			font-size: 26px; top: -1.75em; right: -3.25em;
-		}
-	}
-
-	.info {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		.color-0;
-		box-sizing: border-box;
-		border-radius: 4px;
-		padding-top: 44px;
-		padding-left: 12px;
-		padding-right: 20px;
-		z-index: 1;
-
-		h1, h2 {
-			font: 1.125em 'Raleway', sans-serif;
-			color: white;
-			text-align: left;
-			text-transform: uppercase;
-		}
-		h1 { font-weight: 900; line-height: 1.125em; }
-		h2 { font-size: 1em; font-weight: 500; margin-top: 3px; margin-bottom: 3px;}
-
-		&.active {
-			top: -100%;
-		}
-		//.color-4 { background-color: rgba(11, 73, 121, 0.8); }
-		&.color-0 { background-color: rgba(7, 94, 144, 0.9) }
-		&.color-1 { background-color: rgba(12, 7, 75, 0.8) }
-		&.color-2 { background-color: rgba(15, 88, 82, 0.8) }
-	}
-	&:last-child {
-		margin-right: 0;
-	}
-	&:nth-child(3n) {
-		margin-right: 0;
-	}
-	&:hover {
-		.info-button { left: 0; }
-		span { 
-			right: 0px;
-			//-webkit-transform: translate(-80px);
-		}
-	}
-}
+@import "home.less";
+@import "portfolio.less";
+@import "single-entry.less";
+@import "about.less";
 
 .Line (@height, @width, @color, @rotation) {
 	height: @height;
@@ -271,177 +80,26 @@ nav {
 	-webkit-transform: rotate(@rotation);
 	-moz-transform: rotate(@rotation);
 	-ms-transform: rotate(@rotation);
-	transform: rotate(@rotation);
-}
+	transform: rotate(@rotation); }
 .line-1 {
 	.Line(40px, 500px, #0c074b, 135deg);
-	left: -5%;
-}
+	left: -5%; }
 .line-2 {
 	.Line(100px, 500px, #075e90, 41deg);
-	right: 25%;
-}
+	right: 25%; }
 .line-3 {
 	.Line(60px, 100%, #0f5852, 41deg);
-	right: -15%;
-}
+	right: -15%; }
 .line-4 {
 	.Line(40px, 100%, #0c074b, 135deg);
-	left: 10%;
-}
+	left: 10%; }
 .line-5 {
 	.Line(100px, 500px, #0f5852, 135deg);
-	left: 5%;
-}
-
-.home {
-	.content { 
-		width: 450px; 
-	}
-	h2 { 
-		font-size: 2.25em; 
-	}
-	nav {
-		position: relative;
-		left: 0;
-		width: 80%;
-		a {
-			display: block;
-			margin-bottom: 14px;
-			padding: 0 0 0 25px;
-			text-align: left; 
-			overflow: hidden;
-			i {
-				position: absolute;
-				right: -50px;
-				transition: right .2s;
-			}
-			&:hover i {
-				right: 15px;
-				transition: right .1s;
-			}
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-	}
-}
-
-.portfolio {
-	.wrap {
-		max-width: 908px;
-	}
-}
-
-.portfolio-entry {
-	.wrap {
-		max-width: 800px;
-		padding-top: 70px;
-	}
-	.content {
-		overflow: auto;
-	}
-	.client,
-	.project,
-	h3 {
-		color: rgb(59, 47, 88);
-		text-align: left;
-		text-transform: uppercase;
-		font-size: 2em;
-	}
-	.project {
-		font-family: "Raleway";
-		font-weight: 400;
-		font-size: 1.5em;
-		margin-bottom: 1.125em;
-	}
-	.left {
-		width: 40%;
-		float: left;
-	}
-	.right {
-		float: right;
-		width: 60%;
-		img {
-			border-radius: 3px;
-			border: 5px solid rgba(7, 94, 144, 0.9);
-		}
-	}
-	h3 { 
-		color: rgb(7, 94, 144);
-		font-size: 1.25em;
-		text-transform: uppercase; 
-		font-weight: 900;
-		margin-bottom: .5em; }
-	.features {
-		margin: .5em 0 2em 0;
-		padding-left: 0;
-		li {
-			font-size: 1em;
-			list-style-position: inside;
-			list-style-type: square;
-			margin-bottom: .125em;
-		}
-	}
-	.see-it {
-		font: 1.5em/1.25em 'Raleway', sans-serif;
-		font-weight: 900;
-		text-transform: uppercase;
-		color: white;
-		background: #05667b url("../img/bg-diag-right.png") no-repeat;
-		background-position: 200px center;
-		border-radius: 3px;
-		padding: .25em 40px .25em 25px;
-		width: 60%;
-		text-align: left; 
-		display: block;
-		position: relative;
-		transition: background-color .6s, background-position .3s;
-		i {
-			position: absolute;
-			right: 15px;
-		}
-		&:hover {
-			color: white;
-			text-decoration: none;
-			background-color: #3c057b;
-			background-position: left center;
-			transition: background-color .6s, background-position .3s;
-		}
-		i {
-			font-size: .8em;
-			margin-left: 10px;
-		}
-	}
-	//background-color: #3b818d;
-}
-
-
-.lab,
-.about {
-	background-color: white;
-	header {
-		border-bottom-color: #c0237c;
-	}
-	h1 {
-		font-weight: 900;
-	}
-	h2 {
-		color: #605474;
-		i {
-			color: #c0237c;
-		}
-	}
-}
-
-
+	left: 5%; }
 
 .wf-loading {
 	h1, h2, p {
 		opacity: 0;
-	}
-	a {
-		color: rgba(255,255,255,0);
 	}
 }
 
@@ -452,12 +110,6 @@ nav {
 		-moz-transition: opacity 0.25s;
 		transition: opacity 0.25s;
 	}
-	a {
-		color: rgba(255,255,255,1);
-		-webkit-transition: color 0.25s;
-		-moz-transition: color 0.25s;
-		transition: color 0.25s;
-	}
 }
 
 @media (max-width: 987px) {
@@ -465,10 +117,9 @@ nav {
 	header { background-size: 100% auto; }
 	h2 {
 		i {
-			display: none;
+			//display: none;
 		}
 	}
-	
 	.entry { 
 		margin-right: 20px;
 		height: 110px;
@@ -478,9 +129,7 @@ nav {
 	 	a {	right: 0; }
 		&:nth-child(3n) { margin-right: 20px; }
 		&:nth-child(2n) { margin-right: 0; }
-	 }
-	
-	
+	}
 	.wrap {
 		width: 80%;
 	}
