@@ -6,10 +6,11 @@ html(lang='en').wf-loading
 		meta(property="og:title", content="#{title}")
 		meta(property="og:site_name", content="Jeremy Freehill")
 		meta(property="og:description", content="Front-end oriented developer with a background in design and 2½ years in a large agency environment")
-		link(rel='icon', type='image/png', href='/img/favicon.png')
-		link(rel='stylesheet', href='/css/bootstrap.min.css')
-		link(rel='stylesheet', href='/css/main.css')
-		script(src='/js/modernizr.custom.min.js')
+		meta(property="og:url", content="#{url}#{path}")
+		link(rel='icon', type='image/png', href='#{url}/img/favicon.png')
+		link(rel='stylesheet', href='#{url}/css/bootstrap.min.css')
+		link(rel='stylesheet', href='#{url}/css/main.css')
+		script(src='#{url}/js/modernizr.custom.min.js')
 		script.
 			// for async font loading
 			WebFontConfig = { google: { families: ['Pacifico', 'Raleway:900, 500'] } };

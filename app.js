@@ -47,6 +47,7 @@ app.use(lessMiddleware({
 // Pass current url to locals
 app.use(function(req, res, next){
 	app.locals.url = req.protocol + "://" + req.get('host');
+	app.locals.path = req.path;
 	next();
 })
 app.use(express.favicon());
