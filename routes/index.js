@@ -31,6 +31,12 @@ exports.portfolio_item = function(req, res){
 		res.send(404);
 	} else {
 		res.locals.entry = entries[found];
+		// pass in previous and next entry slugs if possible
+		if (found > 0)
+			res.locals.prevEntry = entries[found-1].slug;
+		if (found < entries.length-1)
+			res.locals.nextEntry = entries[found+1].slug;
+
 		res.render('single-entry', {
 			slug: "single-entry",
 			title: requestedItem

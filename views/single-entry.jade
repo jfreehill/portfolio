@@ -5,7 +5,17 @@ block content
 		include includes/nav
 		a.open-menu
 			i.icon-menu
-		
+
+		nav.entry-nav
+			if prevEntry
+				a(href="/portfolio/#{prevEntry}").previous 
+					i.icon-angle-circled-left
+					p Previous
+			if nextEntry
+				a(href="/portfolio/#{nextEntry}").next 
+					i.icon-angle-circled-right
+					p Next
+
 		section.content
 			section.full-entry
 				div.left
@@ -21,7 +31,7 @@ block content
 							each feature in entry.features
 								li #{feature}
 					if entry.link
-						a(href='#{entry.link}', target='_new').see-it
+						a(href='#{entry.link}', target='_blank').see-it
 							| See It
 							i.icon-link-ext-alt
 					else
@@ -29,4 +39,5 @@ block content
 			
 				
 		div.content-cap
+		p.legal &copy;2013 Jeremy Freehill
 						
