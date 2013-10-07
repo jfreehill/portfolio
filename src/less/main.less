@@ -56,7 +56,11 @@ a {
 	height: 8px;
 	margin-bottom: 1em; 
 	background: transparent url('../img/bg-pattern-01.png') repeat-x; }
-.legal { margin-bottom: 30px; }
+.legal { margin-bottom: 30px;
+	@media (max-width: 640px) {
+		margin-left: 2.5%;
+	}
+}
 
 @import "header.less";
 
