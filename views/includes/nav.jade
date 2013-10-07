@@ -1,17 +1,19 @@
 nav.small
-	a(href='/') 
+	a(href='/').nav-home
 		i.icon-home
 		p Home
-	a(href='http://linkedin.com/in/jeremyfreehill', target='_new')
+	a(href='http://linkedin.com/in/jeremyfreehill', target='_new').nav-resume
 		i.icon-doc-text
 		p Resume
-	a(href='/contact')
+	a(href='/contact').nav-contact
 		i.icon-mail
 		p Contact
 	//- a(href='/lab')
 	//- 	i.icon-beaker
 	//- 	p Experiments
-	if entry
-		a(href='/portfolio')
-			i.icon-picture
-			p portfolio
+	a(href='/about').nav-about
+		i.icon-info-circled
+		p About
+	a(href='/portfolio').nav-portfolio
+		i.icon-picture
+		p portfolio
