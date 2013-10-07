@@ -17,6 +17,7 @@ var app = express();
 var oneDay = 24 * 60 * 60 * 1000;
 var oneWeek = oneDay * 7;
 
+
 // all environments
 
 app.set('port', process.env.PORT || 3000);
@@ -24,7 +25,9 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.set('view cache', true);
 
+
 // development only
+
 if ('development' == app.get('env')) {
 	//app.use(express.logger('dev'));
   	app.use(express.errorHandler());
@@ -32,6 +35,7 @@ if ('development' == app.get('env')) {
   	app.set('view cache', false);
 }
 
+// Set middleware, etc.
 app.use(lessMiddleware({
 	src: path.join(__dirname, 'src/less'),
 	dest: path.join(__dirname, 'public/css'),
@@ -45,20 +49,17 @@ app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneWeek }));
 
 
-
 // Define routes
+
 app.get('/', routes.index);
 app.get('/portfolio', routes.portfolio);
 app.get('/portfolio/:item', routes.portfolio_item);
 app.get('/lab', routes.lab);
 app.get('/about', routes.about);
 
-app.get('/test', function(req, res){
-	res.send(app.locals.appData);
-});
-app.get('/route-test', routes.route_test);
 
 // Load JSON data to memory and start server
+
 fs.readFile(appDataFile, 'utf8', function(err, data){
 	if (err) { 
 		console.log('Error: ' + err); 
@@ -71,5 +72,3 @@ fs.readFile(appDataFile, 'utf8', function(err, data){
 		console.log(path.join(__dirname, 'src/less'));
 	});
 });
-
-

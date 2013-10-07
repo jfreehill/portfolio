@@ -31,8 +31,8 @@ exports.portfolio_item = function(req, res){
 		res.send(404);
 	} else {
 		res.locals.entry = entries[found];
-		res.render('portfolio-entry', {
-			slug: "portfolio-entry",
+		res.render('single-entry', {
+			slug: "single-entry",
 			title: requestedItem
 		});
 	}
