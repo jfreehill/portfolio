@@ -5,6 +5,7 @@ html(lang='en').wf-loading
 		link(rel='icon', type='image/png', href='/img/favicon.png')
 		link(rel='stylesheet', href='/css/bootstrap.min.css')
 		link(rel='stylesheet', href='/css/main.css')
+		script(src='/js/modernizr.custom.min.js')
 		script.
 			// for async font loading
 			WebFontConfig = { google: { families: ['Pacifico', 'Raleway:900, 500'] } };
@@ -12,8 +13,6 @@ html(lang='en').wf-loading
 	body(class=slug)
 
 		header
-			a(href="/about")
-				i.icon-info-circled
 			h1 
 				a(href="/") Jeremy Freehill
 		block content
