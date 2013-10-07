@@ -28,7 +28,7 @@ exports.portfolio_item = function(req, res){
 
 	// if slug is not found, redirect to 404; else send to page with entry data
 	if (found === false) {
-		res.send(404);
+		res.send("Four-Oh-Four Bro", 404);
 	} else {
 		res.locals.entry = entries[found];
 		// pass in previous and next entry slugs if possible

@@ -8,21 +8,20 @@ block content
 
 		nav.entry-nav
 			if prevEntry
-				a(href="/portfolio/#{prevEntry}").previous 
+				a(href="#{url}/portfolio/#{prevEntry}").previous 
 					i.icon-angle-circled-left
 					p Previous
 			if nextEntry
-				a(href="/portfolio/#{nextEntry}").next 
+				a(href="#{url}/portfolio/#{nextEntry}").next 
 					i.icon-angle-circled-right
 					p Next
-
 		section.content
 			section.full-entry
 				div.left
 					h1.client #{entry.client}
 					h2.project #{entry.project}
 				div.right
-					img(src='/img/gallery/#{entry.slug}-01.jpg')
+					img(src='#{url}/img/gallery/#{entry.slug}-01.jpg')
 				div.left
 					//- only display entries if data is passed				
 					if entry.features

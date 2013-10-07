@@ -14,8 +14,8 @@ block content
 				if appData
 					each entry in appData.entries
 						li(class="entry")
-							a(href='portfolio/#{entry.slug}')
-								img(src='/img/thumbs/#{entry.thumb}')
+							a(href='#{url}/portfolio/#{entry.slug}')
+								img(src='#{url}/img/thumbs/#{entry.thumb}')
 								span
 									i.icon-link-2
 								section.info

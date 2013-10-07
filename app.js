@@ -8,6 +8,7 @@ var express = require('express')
   , routes = require('./routes')
   , http = require('http')
   , path = require('path')
+  , url = require('url')
   , fs = require('fs')
   , lessMiddleware = require('less-middleware');
 
@@ -43,11 +44,15 @@ app.use(lessMiddleware({
 	force: ('development' == app.get('env')),
 	compress: true
 }));
+// Pass current url to locals
+app.use(function(req, res, next){
+	app.locals.url = req.protocol + "://" + req.get('host');
+	next();
+})
 app.use(express.favicon());
 app.use(express.compress());
-app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneWeek }));
-
+app.use(app.router);
 
 // Define routes
 
@@ -57,6 +62,10 @@ app.get('/portfolio/:item', routes.portfolio_item);
 app.get('/lab', routes.lab);
 app.get('/about', routes.about);
 
+//The 404 Route (ALWAYS Keep this as the last route)
+app.get('*', function(req, res){
+  res.send('404 Yo!', 404);
+});
 
 // Load JSON data to memory and start server
 
@@ -66,7 +75,8 @@ fs.readFile(appDataFile, 'utf8', function(err, data){
 		return;
 	}
 	app.locals.appData = JSON.parse(data);
-
+	
+	//console.log(req.protocol + "://" + req.get('host') + req.url);
 	http.createServer(app).listen(app.get('port'), function(){
   		console.log('Express server listening on port ' + app.get('port') + ' w/ environment: ' + app.get('env'));
 		console.log(path.join(__dirname, 'src/less'));
