@@ -19,7 +19,12 @@ body {
 
 /* Fontello */
 @import "fontello.less";
-
+p, li {
+	font-family: 'Raleway', sans-serif;
+}
+a {
+	color: white;
+}
 h1 {
 	font: 3.75em 'Raleway', sans-serif;
 	font-weight: 900;
@@ -36,12 +41,7 @@ h2 {
 	margin-bottom: 25px; 
 	margin-top: 0;
 }
-h3, p, li, a {
-	font-family: 'Raleway', sans-serif;
-}
-a {
-	color: white;
-}
+
 .content {
 	padding: 32px 0 24px 0;
 	border-width: 8px 0;
@@ -110,9 +110,9 @@ a {
 .wf-active {
 	h1, h2, p {
 		opacity: 1;
-		-webkit-transition: opacity 0.25s;
-		-moz-transition: opacity 0.25s;
-		transition: opacity 0.25s;
+		-webkit-transition: opacity 0.1s;
+		-moz-transition: opacity 0.1s;
+		transition: opacity 0.1s;
 	}
 }
 

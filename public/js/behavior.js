@@ -1,5 +1,5 @@
 // Set zepto as dependency
-; define(['zepto'], function(){
+; define(['query_library'], function(){
 
 	// Set randomized color class based on number passed
 	$.fn.randomColorClass = function(num){
@@ -17,7 +17,7 @@
 	}
 
 	// Dynamically add diagonal lines on every page
-	var lines = 5;
+	var lines = 0;
 	for (n = 0; n < lines; n++) {
 		var line = $('<div>').attr('class', 'line-'+(n+1));
 		$('header').eq(0).prepend(line);
