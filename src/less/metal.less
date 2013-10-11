@@ -1,13 +1,15 @@
 @import url("http://fonts.googleapis.com/css?family=Metal+Mania");
 .EXTREME {
-
 	body {
 		background-color: black;
 	}
 	h1 {
 		text-shadow: 0 0 10px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
 	}
-	h2 { color: white; }
+	h2 { 
+		color: white; 
+		i { display: none; }
+	}
 	h1, h2, h3, p, li, a {
 		font-family: "Metal Mania";
 	}
@@ -17,13 +19,18 @@
 		background: url('../img/metal/metal-pattern-texture.jpg');
 		div { display: none; }
 	}
-	.content { padding-top: 4.125em; }
+	.content { 
+		padding-top: 4.5em; 
+		p, li { color: white; }
+	
+	}
 	.content,
 	.content-cap {
 		background-image: url('../img/metal/fire-bar.gif');
 		background-size: 100%;
 	}
-	.content-cap { height: 6em; }
+	.content-cap { height: 3em; }
+	.small a { border: none; line-height: 1.75em; }
 	nav a { 
 		line-height: 1.5em;
 		text-align: center;
@@ -31,11 +38,52 @@
 		background-color: red;
 		background-image: none;
 		border: 4px double #fff;
+		padding-left: 0;
 	}
 	p.legal {
 		color: white;
 	}
-	.entry { 
+	.entry,
+	.info { 
 		border-radius: 0;
+		.color-0 { background-color: rgba(80,80,80, .9) }
+		.color-1 { background-color: rgba(160,20,0, .9) }
+		.color-2 { background-color: rgba(20,20,20, .95) }
+	}
+	.entry {
+		h1 { text-shadow: 0 0 10px #ffbb00, 0 0 40px #ff0000; }
+		h1, h2 {
+			font-size: 1.25em;
+			font-family: "Metal Mania";
+		}
+		span { border-right-color: #000; }
+	}
+	.portfolio,
+	.single-entry {
+		.content-cap {
+			height: 4em;
+		}
+	}
+	.single-entry {
+		.content {
+			padding-top: 5em;
+		}
+		.content a {
+			border-radius: 0;
+			background-color: red;
+			background-image: none;
+		}
+		.client { text-shadow: 0 0 10px #ffbb00, 0 0 40px #ff0000; line-height: 1em; }
+		.client,
+		.project,
+		a {
+			font-family: "Metal Mania";
+			color: white;
+		}
+		.project {
+			line-height: 1.5em;
+		}
+		h3 { color: red; }
+		img { border-color: gray; border-radius: 0; }
 	}
 }
