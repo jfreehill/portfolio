@@ -16,7 +16,7 @@
 			"role": "Full Development",
 			"thumb": "cdw_stadium.jpg",
 			"link": "http://cdwstadium.com/",
-			"features" : ["YouTube iframe API", "Hash-based deeplinking", "Zepto JS"]
+			"features" : ["YouTube iframe API", "Hash-based deeplinking", "Responsive Styles", "Zepto JS"]
 		},
 		{
 			"slug" : "huggies-mom-inspired",
