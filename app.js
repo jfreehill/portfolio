@@ -34,6 +34,10 @@ if ('development' == app.get('env')) {
   	app.set('view cache', false);
 }
 
+app.locals({
+    year: new Date().getFullYear()
+});
+
 // Set middleware, etc.
 app.use(lessMiddleware({
 	src: path.join(__dirname, 'src/less'),
@@ -47,7 +51,7 @@ app.use(function(req, res, next){
 	app.locals.url = req.protocol + "://" + req.get('host');
 	app.locals.path = req.path;
 	next();
-})
+});
 app.use(express.favicon());
 app.use(express.compress());
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneWeek }));
