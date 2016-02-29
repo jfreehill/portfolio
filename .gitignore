@@ -19,3 +19,5 @@ results
 node_modules
 npm-debug.log
 public/css/main.css
+
+.DS_Store
