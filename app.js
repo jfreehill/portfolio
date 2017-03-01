@@ -79,7 +79,6 @@ fs.readFile(appDataFile, 'utf8', function(err, data){
 	}
 	app.locals.appData = JSON.parse(data);
 	
-	//console.log(req.protocol + "://" + req.get('host') + req.url);
 	http.createServer(app).listen(app.get('port'), function(){
   		console.log('Express server listening on port ' + app.get('port') + ' w/ environment: ' + app.get('env'));
 		console.log(path.join(__dirname, 'src/less'));
